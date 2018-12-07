@@ -689,24 +689,7 @@ function am() {
 		document.getElementById("am").style.display = "none";
 	}
 }
-/* Chatterbox Bar x*/
-function an() {
-	var a = document.getElementById("city").value;
-	var b = document.getElementById("age").value; 
-	var c = document.getElementById("spending").value;
-	var d = document.getElementById("choiceOne").checked;
-	var e = document.getElementById("choiceTwo").checked;
-	var f = document.getElementById("choiceThree").checked;
-	var g = document.getElementById("choiceFour").checked;
-	if(( a === "All of Wausau"|| a === "Wausau") &&
-	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
-		c >= 15 &&
-		g){
-		document.getElementById("an").style.display = "block";
-	} else {
-		document.getElementById("an").style.display = "none";
-	}
-}
+/* AN x*/
 /* The Glass Station x*/
 function ao() {
 	var a = document.getElementById("city").value;
@@ -724,24 +707,7 @@ function ao() {
 		document.getElementById("ao").style.display = "none";
 	}
 }
-/* West Side Tasty Treats x*/
-function ap() {
-	var a = document.getElementById("city").value;
-	var b = document.getElementById("age").value; 
-	var c = document.getElementById("spending").value;
-	var d = document.getElementById("choiceOne").checked;
-	var e = document.getElementById("choiceTwo").checked;
-	var f = document.getElementById("choiceThree").checked;
-	var g = document.getElementById("choiceFour").checked;
-	if(( a === "All of Wausau"|| a === "Wausau") &&
-	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
-		c >= 4 &&
-		(d || f)){
-		document.getElementById("ap").style.display = "block";
-	} else {
-		document.getElementById("ap").style.display = "none";
-	}
-}
+/* AP x*/
 /* Sams Pizza of Wausau x*/
 function aq() {
 	var a = document.getElementById("city").value;
@@ -1044,24 +1010,7 @@ function bj() {
 		document.getElementById("bj").style.display = "none";
 	}
 }
-/* Pho 76 x*/
-function bk() {
-	var a = document.getElementById("city").value;
-	var b = document.getElementById("age").value; 
-	var c = document.getElementById("spending").value;
-	var d = document.getElementById("choiceOne").checked;
-	var e = document.getElementById("choiceTwo").checked;
-	var f = document.getElementById("choiceThree").checked;
-	var g = document.getElementById("choiceFour").checked;
-	if(( a === "All of Wausau"|| a === "Wausau") &&
-	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
-		c >= 5 &&
-		d){
-		document.getElementById("bk").style.display = "block";
-	} else {
-		document.getElementById("bk").style.display = "none";
-	}
-}
+/* BK x*/
 /* Treu's Tic Toc Club x*/
 function bl() {
 	var a = document.getElementById("city").value;
@@ -3391,24 +3340,7 @@ function hu() {
 		document.getElementById("hu").style.display = "none";
 	}
 }
-/* Speakeasy x*/
-function hv() {
-	var a = document.getElementById("city").value;
-	var b = document.getElementById("age").value; 
-	var c = document.getElementById("spending").value;
-	var d = document.getElementById("choiceOne").checked;
-	var e = document.getElementById("choiceTwo").checked;
-	var f = document.getElementById("choiceThree").checked;
-	var g = document.getElementById("choiceFour").checked;
-	if(( a === "All of Wausau"|| a === "Weston") &&
-	    ( b === "21 and Over" )&&
-		c >= 15 &&
-		g){
-		document.getElementById("hv").style.display = "block";
-	} else {
-		document.getElementById("hv").style.display = "none";
-	}
-}
+/* HV x*/
 /*
 
 		Rib Mountain
@@ -4534,41 +4466,8 @@ function kx() {
 		document.getElementById("kx").style.display = "none";
 	}
 }
-/* NuYu Hair Design x*/
-function ky() {
-	var a = document.getElementById("city").value;
-	var b = document.getElementById("age").value; 
-	var c = document.getElementById("spending").value;
-	var d = document.getElementById("choiceOne").checked;
-	var e = document.getElementById("choiceTwo").checked;
-	var f = document.getElementById("choiceThree").checked;
-	var g = document.getElementById("choiceFour").checked;
-	if(( a === "All of Wausau"|| a === "Rothschild") &&
-	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
-		f){
-		document.getElementById("ky").style.display = "block";
-	} else {
-		document.getElementById("ky").style.display = "none";
-	}
-}
-/* Relocation Pub and Eatery x*/
-function kz() {
-	var a = document.getElementById("city").value;
-	var b = document.getElementById("age").value; 
-	var c = document.getElementById("spending").value;
-	var d = document.getElementById("choiceOne").checked;
-	var e = document.getElementById("choiceTwo").checked;
-	var f = document.getElementById("choiceThree").checked;
-	var g = document.getElementById("choiceFour").checked;
-	if(( a === "All of Wausau"|| a === "Rothschild") &&
-	    (b === "18-20" || b === "21 and Over" )&&
-		c >= 10 &&
-		(d || g)){
-		document.getElementById("kz").style.display = "block";
-	} else {
-		document.getElementById("kz").style.display = "none";
-	}
-}
+/* KY x*/
+/* KZ x*/
 /* LA */
 /* Gander Outdoor x*/
 function lb() {
