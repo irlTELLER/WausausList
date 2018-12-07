@@ -1,13 +1,3 @@
-/* Pulls the hours of the day for showing/hiding business depending on the hours */
-function hours() {
-    var d = new Date();
-	document.getElementById("timeHours").innerHTML = d.getHours();
-}
-/* Pulls the day of the week for showing/hiding business depending on the day (Sun = 0; Mon = 1;...Fri = 5; Sat = 6 */
-function day() {
-	var d = new Date();
-  	document.getElementById("timeDay").innerHTML = d.getDay();
-}
 /* For the selection of the city youre in */
 function city() {
 	var town = document.getElementById("city").value;
@@ -97,8 +87,6 @@ function featuredSlotOne() {
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceFeatured").checked;
-	var hour = document.getElementById("timeHours").value;
-    var day = document.getElementById("timeDay").value;
 	if( a === "All of Wausau" &&
 		d) {
 		document.getElementById("featuredSlotOne").style.display = "block";
@@ -113,8 +101,6 @@ function HumaneSocietyofMarathonCounty() {
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var f = document.getElementById("choiceInsideActivity").checked;
-	var hour = document.getElementById("timeHours").value;
-    var day = document.getElementById("timeDay").value;
 	if(( a === "All of Wausau"|| a === "Wausau") &&
 	    ( b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 0 &&
