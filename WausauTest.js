@@ -1,13 +1,99 @@
-/* Featured Slot MASA  (checked)*/
-function featuredSlotOne() {
-	var slot = document.getElementById("featuredSlotOne");
-	 var now = new Date();
+ 	var now = new Date();
 	var day = now.getDay();
     var hour = now.getHours();
 	var a = document.getElementById("city").value;
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
+	var d = document.getElementById("choiceInsideActivity").checked;
 	var d = document.getElementById("choiceFeatured").checked;
+	var d = document.getElementById("choicePark").checked;
+
+/* For the selection of the city youre in */
+function city() {
+	var town = document.getElementById("city").value;
+	document.getElementById("citySelect").innerHTML = town;
+}
+/* For the age range you selected */
+function ageRange() {
+	var age = document.getElementById("age").value;
+	document.getElementById("ageRange").innerHTML = age;
+}
+/* For checking if the CheckBox is selected */
+function checkOne() {
+	var one = document.getElementById("choiceEat");
+	if (one.checked == true){
+		document.getElementById("checkOne").innerHTML = "Eat,"
+	} else {
+		document.getElementById("checkOne").innerHTML = "";
+	}
+}
+function checkTwo() {
+	var two = document.getElementById("choiceOutsideActivity");
+	if (two.checked == true){
+		document.getElementById("checkTwo").innerHTML = "Outdoor Activity,";
+	} else {
+		document.getElementById("checkTwo").innerHTML = "";
+	}
+}
+function checkThree() {
+	var three = document.getElementById("choiceInsideActivity");
+	if (three.checked == true){
+		document.getElementById("checkThree").innerHTML = "Indoor Activity,";
+	} else {
+		document.getElementById("checkThree").innerHTML = "";
+	}
+}
+function checkFour() {
+	var four = document.getElementById("choiceBar");
+	if (four.checked == true){
+		document.getElementById("checkFour").innerHTML = "Bars";
+	} else {
+		document.getElementById("checkFour").innerHTML = "";
+	}
+}
+function checkFive() {
+	var four = document.getElementById("choiceFeatured");
+	if (four.checked == true){
+		document.getElementById("checkFour").innerHTML = "Bars";
+	} else {
+		document.getElementById("checkFour").innerHTML = "";
+	}
+}
+function checkSix() {
+	var four = document.getElementById("choicePark");
+	if (four.checked == true){
+		document.getElementById("checkFour").innerHTML = "Bars";
+	} else {
+		document.getElementById("checkFour").innerHTML = "";
+	}
+}
+function checkSeven() {
+	var four = document.getElementById("choiceShopping");
+	if (four.checked == true){
+		document.getElementById("checkFour").innerHTML = "Bars";
+	} else {
+		document.getElementById("checkFour").innerHTML = "";
+	}
+}
+function checkEight() {
+	var four = document.getElementById("choiceIcecream");
+	if (four.checked == true){
+		document.getElementById("checkFour").innerHTML = "Ice Cream";
+	} else {
+		document.getElementById("checkFour").innerHTML = "";
+	}
+}
+function checkNine() {
+	var four = document.getElementById("choiceCoffee");
+	if (four.checked == true){
+		document.getElementById("checkFour").innerHTML = "Coffee";
+	} else {
+		document.getElementById("checkFour").innerHTML = "";
+	}
+}
+/* Featured Slot MASA  (checked)*/
+function featuredSlotOne() {
+	var slot = document.getElementById("featuredSlotOne");
 	/*  Lunch (Mon - Thur) 11am - 3pm   Dinner (Mon - Thur) 4:30pm - 10pm   (Fri & Sat) 11am - 10:30pm  (Sun) 11:30am - 9pm */
     if (((0 == day && 11 <= hour && 20 >= hour)||(1  == day  && 10 <= hour && 14 >= hour)||(1 == day  && 16 <= hour && 21 >= hour)||(2  == day  && 10 <= hour && 14 >= hour)||(2 == day  && 16 <= hour && 21 >= hour)||(3  == day  && 10 <= hour && 14 >= hour)||(3 == day  && 16 <= hour && 21 >= hour)||(4  == day  && 10 <= hour && 14 >= hour)||(4 == day  && 16 <= hour && 21 >= hour)||(5  == day && 10 <= hour && 21 >= hour)||(6  == day && 10 <= hour && 21 >= hour)) &&
 		(a === "All of Wausau")&&
@@ -24,13 +110,6 @@ function featuredSlotOne() {
 /* Humane Society of Marathon County (checked)*/
 function HumaneSocietyofMarathonCounty() {
 	var slot = document.getElementById("HumaneSocietyofMarathonCounty");
-	 var now = new Date();
-	var day = now.getDay();
-    var hour = now.getHours();
-	var a = document.getElementById("city").value;
-	var b = document.getElementById("age").value; 
-	var c = document.getElementById("spending").value;
-	var d = document.getElementById("choiceInsideActivity").checked;
 	/* (Mon & Tues) 12pm - 5pm  (Wed & Thurs) Closed  (Fri & Sat) 12pm - 5pm  (Sun) Closed */
 	if(((1 == day && 11 <= hour && 16 >= hour)||(2 == day && 11 <= hour && 16 >= hour)||(5 == day && 11 <= hour && 16 >= hour)||(6 == day && 11 <= hour && 16 >= hour))&&
 		(a === "All of Wausau"|| a === "Wausau")&&
@@ -47,13 +126,6 @@ function HumaneSocietyofMarathonCounty() {
 /* Sunnyvale Park (checked)*/
 function SunnyvalePark() {
 	var slot = document.getElementById("SunnyvalePark");
-	var now = new Date();
-	var day = now.getDay();
-    var hour = now.getHours();
-	var a = document.getElementById("city").value;
-	var b = document.getElementById("age").value; 
-	var c = document.getElementById("spending").value;
-	var d = document.getElementById("choicePark").checked;
 	/* (Everyday) 6am - 11pm */
 	if((5 <= hour && 22 >= hour)&&
 		(a === "All of Wausau"|| a === "Wausau")&&
@@ -162,7 +234,7 @@ function ApplebeesGrillBar() {
     		slot.classList.add("hide");
     }
 }
-/* Jimmy Johns (checked) */
+/* Jimmy Johns x*/
 function JimmyJohns() {
 	var slot = document.getElementById("JimmyJohns");
     var now = new Date();
@@ -172,11 +244,10 @@ function JimmyJohns() {
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
-	/* Everyday 11am-9pm */
-	if((10 <= hour && 20 >= hour)&&
-		(a === "All of Wausau"|| a === "Wausau")&&
+	if((10 <= hour && 20 >= hour) &&
+		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
-		(c >= 7)&&
+		c >= 7 &&
 		d){
 		slot.classList.remove("hide");
         slot.classList.add("specificEventWausau");
@@ -185,7 +256,7 @@ function JimmyJohns() {
     		slot.classList.add("hide");
     }
 }
-/* McDonald's (checked)*/
+/* McDonald's x*/
 function McDonaldsWausau() {
 	var slot = document.getElementById("McDonaldsWausau");
     var now = new Date();
@@ -196,10 +267,10 @@ function McDonaldsWausau() {
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
 	/* Inside (Everyday) 5am - 11pm   Drive-Thru (Sun - Sat) 5am - 12am */
-	if((4 <= hour)&&
-		(a === "All of Wausau" || a === "Wausau")&&
-	    (b === "Under 18" || b === "18-20" || b === "21 and Over")&&
-		(c >= 7)&&
+	if((4 <= hour && (23 >= hour || 0 == hour)) &&
+		( a === "All of Wausau"|| a === "Wausau") &&
+	    (b === "Under 18" || b === "18-20" || b === "21 and Over" ) &&
+		c >= 7 &&
 		d){
 		slot.classList.remove("hide");
         slot.classList.add("specificEventWausau");
@@ -208,7 +279,7 @@ function McDonaldsWausau() {
     		slot.classList.add("hide");
     }
 }
-/* Subway (checked)*/
+/* Subway x*/
 function SubwayWausau() {
 	var slot = document.getElementById("SubwayWausau");
     var now = new Date();
@@ -218,11 +289,11 @@ function SubwayWausau() {
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
-	/* (Sun) 8am - 9pm   (Mon - Fri) 7am - 10pm   (Sat) 8am - 10pm */
-	if(((0 == day && 7 <= hour && 20 >= hour)||(1 == day && 6 <= hour && 21 >= hour)||(2 == day && 6 <= hour && 21 >= hour)||(3 == day && 6 <= hour && 21 >= hour)||	(4 == day && 6 <= hour && 21 >= hour)||(5 == day && 6 <= hour && 21 >= hour)||(6 == day && 8 <= hour && 21 >= hour))&&
-		(a === "All of Wausau"|| a === "Wausau")&&
+	/* (Mon - Fri) 7am - 10pm   (Sat) 8am - 10pm   (Sun) 8am - 9pm */
+	if(((0 == day && 7 <= hour && 20 >= hour)||(1 == day && 6 <= hour && 21 >= hour)||(2 == day && 6 <= hour && 21 >= hour)||(3 == day && 6 <= hour && 21 >= hour)||(4 == day && 6 <= hour && 21 >= hour)||(5 == day && 6 <= hour && 21 >= hour)||(6 == day && 8 <= hour && 21 >= hour))&&
+		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
-		(c >= 5)&&
+		c >= 5 &&
 		d){
 		slot.classList.remove("hide");
         slot.classList.add("specificEventWausau");
@@ -231,7 +302,7 @@ function SubwayWausau() {
     		slot.classList.add("hide");
     }
 }
-/* Buffalo Wild Wings	(checked)*/
+/* Buffalo Wild Wings	x*/
 function BuffaloWildWings() {
 	var slot = document.getElementById("BuffaloWildWings");
     var now = new Date();
@@ -243,10 +314,10 @@ function BuffaloWildWings() {
 	var d = document.getElementById("choiceEat").checked;
 	var g = document.getElementById("choiceBar").checked;
 	/* (Sun - Wed) 11am - 11pm   (Thur - Sat) 11am - 12am */
-	if(((0 == day && 10 <= hour && 22 >= hour)||(1 == day && 10 <= hour && 22 >= hour)||(2 == day && 10 <= hour && 22 >= hour)||(3 == day && 10 <= hour && 22 >= hour)||(4 == day && 10 <= hour && 23 >= hour)||(5 == day && 10 <= hour && 23 >= hour)||(6 == day && 10 <= hour && 23 >= hour)) &&
-		(a === "All of Wausau"|| a === "Wausau")&&
-	    (b === "Under 18" || b === "18-20" || b === "21 and Over")&&
-		(c >= 10)&&
+	if(((0 == day && 10 <= hour && 22 >= hour) || (1 == day && 10 <= hour && 22 >= hour) || (2 == day && 10 <= hour && 22 >= hour) || (3 == day && 10 <= hour && 22 >= hour) || (4 == day && 10 <= hour && 23 >= hour) || (5 == day && 10 <= hour && 23 >= hour) || (6 == day && 10 <= hour && 23 >= hour)) &&
+		( a === "All of Wausau"|| a === "Wausau") &&
+	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
+		c >= 10 &&
 		(d || g)){
 		slot.classList.remove("hide");
         slot.classList.add("specificEventWausau");
@@ -255,7 +326,7 @@ function BuffaloWildWings() {
     		slot.classList.add("hide");
     }
 }
-/* Day's Bowl-A-Dome (checked)*/
+/* Day's Bowl-A-Dome x*/
 function DaysBowlADome() {
 	var slot = document.getElementById("DaysBowlADome");
     var now = new Date();
@@ -266,11 +337,11 @@ function DaysBowlADome() {
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
 	var f = document.getElementById("choiceInsideActivity").checked;
-	/* (Sun) 12pm - 5pm   (Mon - Thur) 12pm - 8pm   (Fri & Sat) 12pm - 12am */
-	if(((0 == day && 11 <= hour && 16 >= hour)||(1 == day && 11 <= hour && 19 >= hour)||(2 == day && 11 <= hour && 19 >= hour)||(3 == day && 11 <= hour && 19 >= hour)||(4 == day && 11 <= hour && 19 >= hour)||(5 == day && 11 <= hour && 23 >= hour)||(6 == day && 11 <= hour && 23 >= hour))&&
-		(a === "All of Wausau"|| a === "Wausau")&&
-	    (b === "Under 18" || b === "18-20" || b === "21 and Over")&&
-		(c >= 7)&&
+	/* (Mon - Thur) 12pm - 8pm   (Fri & Sat) 12pm - 12am   (Sun) 12pm - 5pm*/
+	if(((0 == day && 11 <= hour && 16 >= hour)||(1 == day && 11 <= hour && 20 >= hour)||(2 == day && 11 <= hour && 20 >= hour)||(3 == day && 11 <= hour && 20 >= hour)||(4 == day && 11 <= hour && 20 >= hour)||(5 == day && 11 <= hour && 23 >= hour)||(6 == day && 11 <= hour && 23 >= hour))&&
+		( a === "All of Wausau"|| a === "Wausau") &&
+	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
+		c >= 7 &&
 		(d || f)){
 		slot.classList.remove("hide");
         slot.classList.add("specificEventWausau");
@@ -298,7 +369,7 @@ function MASAJapanese() {
 		document.getElementById("m").style.display = "none";
 	}
 } */
-/* Noodle's and Company (checked)*/
+/* Noodle's and Company x*/
 function NoodlesAndCompany() {
 	var slot = document.getElementById("NoodlesAndCompany");
     var now = new Date();
@@ -309,10 +380,10 @@ function NoodlesAndCompany() {
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
 	/* (Sun - Wed) 11am - 9pm   (Thur - Sat) 11am - 10pm */
-	if(((0 == day && 10 <= hour && 20 >= hour)||(1 == day && 10 <= hour && 20 >= hour)||(2 == day && 10 <= hour && 20 >= hour)||(3 == day && 10 <= hour && 20 >= hour)||(4 == day && 10 <= hour && 21 >= hour)||(5 == day && 10 <= hour && 21 >= hour)||(6 == day && 10 <= hour && 21 >= hour))&&
-		(a === "All of Wausau"|| a === "Wausau")&&
-	    (b === "Under 18" || b === "18-20" || b === "21 and Over")&&
-		(c >= 8)&&
+	if(((0 == day && 10 <= hour && 20 >= hour) || (1 == day && 10 <= hour && 20 >= hour) || (2 == day && 10 <= hour && 20 >= hour) || (3 == day && 10 <= hour && 20 >= hour) || (4 == day && 10 <= hour && 21 >= hour) || (5 == day && 10 <= hour && 21 >= hour) || (6 == day && 10 <= hour && 21 >= hour)) &&
+		( a === "All of Wausau"|| a === "Wausau") &&
+	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
+		c >= 8 &&
 		d){
 		slot.classList.remove("hide");
         slot.classList.add("specificEventWausau");
@@ -321,7 +392,7 @@ function NoodlesAndCompany() {
     		slot.classList.add("hide");
     }
 }
-/* Brockmeyer Park (checked)*/
+/* Brockmeyer Park x*/
 function BrockmeyerPark() {
 	var slot = document.getElementById("BrockmeyerPark");
     var now = new Date();
@@ -331,9 +402,9 @@ function BrockmeyerPark() {
 	var b = document.getElementById("age").value; 
 	var e = document.getElementById("choicePark").checked;
 		/* 6am - 11pm */
-	if((5 <= hour && 22 >= hour)&&
-		(a === "All of Wausau"|| a === "Wausau")&&
-	    (b === "Under 18" || b === "18-20" || b === "21 and Over")&&
+	if((5 <= hour && 22 >= hour) &&
+		( a === "All of Wausau"|| a === "Wausau") &&
+	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		e){
 		slot.classList.remove("hide");
         slot.classList.add("specificEventWausau");
@@ -342,7 +413,7 @@ function BrockmeyerPark() {
     		slot.classList.add("hide");
     }
 }
-/* Vino Latte (checked)*/
+/* Vino Latte x*/
 function VinoLatteWausau() {
 	var slot = document.getElementById("VinoLatteWausau");
     var now = new Date();
@@ -353,11 +424,11 @@ function VinoLatteWausau() {
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceCoffee").checked;
 	var g = document.getElementById("choiceBar").checked;
-	/* (Sun) 9am - 3pm  (Mon - Fri) 6am - 8pm (Sat) 7:30am - 4pm */
-	if(((0 == day && 8 <= hour && 14 >= hour)||(1 == day && 5 <= hour && 19 >= hour)||(2 == day && 5 <= hour && 19 >= hour)||(3 == day && 5 <= hour && 19 >= hour)||(4 == day && 5 <= hour && 19 >= hour)||(5 == day && 5 <= hour && 19 >= hour)||(6 == day && 7 <= hour && 15 >= hour))&& 
-		(a === "All of Wausau"|| a === "Wausau")&&
-	    (b === "18-20" || b === "21 and Over")&&
-		(c >= 5)&&
+	/* (Mon - Fri) 6am - 8pm (Sat) 7:30am - 4pm (Sun) 9am - 3pm */
+	if(((0 == day && 8 <= hour && 20 >= hour) || ( 1 == day && 5 <= hour && 19 >= hour) || ( 2 == day && 5 <= hour && 19 >= hour) || ( 3 == day && 5 <= hour && 19 >= hour) || ( 4 == day && 5 <= hour && 19 >= hour) || ( 5 == day && 5 <= hour && 19 >= hour) || ( 6 == day && 7 <= hour && 16 >= hour )) && 
+		( a === "All of Wausau"|| a === "Wausau") &&
+	    ( b === "18-20" || b === "21 and Over" )&&
+		c >= 5 &&
 		(d || g)){
 		slot.classList.remove("hide");
         slot.classList.add("specificEventWausau");
@@ -367,7 +438,7 @@ function VinoLatteWausau() {
     }
 }
 /* Q x*/
-/* Arby's (checked)*/
+/* Arby's x*/
 function ArbysWausau() {
 	var slot = document.getElementById("ArbysWausau");
     var now = new Date();
@@ -378,10 +449,10 @@ function ArbysWausau() {
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
 	/* 6:30am - 10pm */
-	if((6 <= hour && 21 >= hour)&& 
-		(a === "All of Wausau"|| a === "Wausau")&&
-	    (b === "Under 18" || b === "18-20" || b === "21 and Over")&&
-		(c >= 8)&&
+	if((6 <= hour && 21 >= hour) && 
+		( a === "All of Wausau"|| a === "Wausau") &&
+	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
+		c >= 8 &&
 		d){
 		slot.classList.remove("hide");
         slot.classList.add("specificEventWausau");
@@ -390,7 +461,7 @@ function ArbysWausau() {
     		slot.classList.add("hide");
     }
 }
-/* Philly's Subs & Gyros (checked)*/
+/* Philly's Subs & Gyros x*/
 function PhillysSubsGyros() {
 	var slot = document.getElementById("PhillysSubsGyros");
     var now = new Date();
@@ -401,10 +472,10 @@ function PhillysSubsGyros() {
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
 	/* (Mon - Fri) 11am - 7pm (Sat) 11am - 3pm (Sun) Closed */
-	if(((1 == day && 10 <= hour && 18 >= hour)||(2 == day && 10 <= hour && 18 >= hour)||(3 == day && 10 <= hour && 18 >= hour)||(4 == day && 10 <= hour && 18 >= hour)||(5 == day && 10 <= hour && 18 >= hour)||(6 == day && 10 <= hour && 14 >= hour))&&
-		(a === "All of Wausau"|| a === "Wausau")&&
-	    (b === "Under 18" || b === "18-20" || b === "21 and Over")&&
-		(c >= 6)&&
+	if(((1 == day && 10 <= hour && 18 >= hour) || (2 == day && 10 <= hour && 18 >= hour) || (3 == day && 10 <= hour && 18 >= hour) || (4 == day && 10 <= hour && 18 >= hour) || (5 == day && 10 <= hour && 18 >= hour) || ( 6 == day && 10 <= hour && 14 >= hour)) &&
+		( a === "All of Wausau"|| a === "Wausau") &&
+	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
+		c >= 6 &&
 		d){
 		slot.classList.remove("hide");
         slot.classList.add("specificEventWausau");
@@ -413,7 +484,7 @@ function PhillysSubsGyros() {
     		slot.classList.add("hide");
     }
 }
-/* Campus Pub (checked)*/
+/* Campus Pub x*/
 function CampusPub() {
 	var slot = document.getElementById("CampusPub");
     var now = new Date();
@@ -426,10 +497,10 @@ function CampusPub() {
 	var e = document.getElementById("choiceOutsideActivity").checked;
 	var g = document.getElementById("choiceBar").checked;
 	/* (Sun) 12pm - 2am   (Mon - Thur) 3pm - 2am   (Fri - Sat) 12pm - 2:30am */
-	if((((0 == day && 11 <= hour && 23 >= hour)||(1 == day && 1 >= hour))||((1 == day && 14 <= hour && 23 >= hour)||(2 == day && 1 >= hour))||((2 == day && 14 <= hour && 23 >= hour)||(3 == day && 1 >= hour))||((3 == day && 14 <= hour && 23 >= hour)||(4 == day && 1 >= hour))||((4 == day && 14 <= hour && 23 >= hour)||(5 == day && 1 >= hour))||((5 == day && 12 <= hour && 23 >= hour)||(6 == day && 1 >= hour))||((6 == day && 12 <= hour && 23 >= hour)||(0 == day && 1 >= hour)))&&
-		(a === "All of Wausau"|| a === "Wausau")&&
-	    (b === "21 and Over")&&
-		(c >= 15)&&
+	if(((((0 == day && 11 <= hour && 23 >= hour) || (1 == day && 1 >= hour))) || (((1 == day && 14 <= hour && 23 >= hour) || (2 == day && 1 >= hour)))||(((2 == day && 14 <= hour && 23 >= hour)|| (3 == day && 1 >= hour))) || (((3 == day && 14 <= hour && 23 >= hour) || (4 == day && 1 >= hour))) || (	((4 == day && 14 <= hour && 23 >= hour) || (5 == day && 1 >= hour))) || (	(	(5 == day && 12 <= hour && 23 >= hour) || (6 == day && 1 >= hour))) || (((6 == day && 12 <= hour && 23 >= hour)|| (0 == day && 1 >= hour)))) &&
+		( a === "All of Wausau"|| a === "Wausau") &&
+	    ( b === "21 and Over" ) &&
+		c >= 15 &&
 		(d || e || g)){ 
 		slot.classList.remove("hide");
         slot.classList.add("specificEventWausau");
@@ -438,7 +509,7 @@ function CampusPub() {
     		slot.classList.add("hide");
     }
 }
-/* Taco Bell (checked) */
+/* Taco Bell x*/
 function TacoBellWausau() {
 	var slot = document.getElementById("TacoBellWausau");
     var now = new Date();
@@ -449,10 +520,10 @@ function TacoBellWausau() {
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
 	/* (Sun-Thur) 7am - 1am  (Fri-Sat) 7am - 3am */
-	if((((0 == day && 6 <= hour && 23 >= hour)||(1 == day && 0 >= hour))||((1 == day && 6 <= hour && 23 >= hour)||(2 == day && 0 >= hour))||((2 == day && 6 <= hour && 23 >= hour)||(3 == day && 0 >= hour))||((3 == day && 6 <= hour && 23 >= hour)||	(4 == day && 0 >= hour))||((4 == day && 6 <= hour && 23 >= hour)||(5 == day && 0 >= hour))||((5 == day && 6 <= hour && 23 >= hour)||(6 == day && 2 >= hour))||((6 == day && 6 <= hour && 23 >= hour)||(0 == day && 2 >= hour)))&&
-		(a === "All of Wausau"|| a === "Wausau")&&
-	    (b === "Under 18" || b === "18-20" || b === "21 and Over")&&
-		(c >= 1)&&
+	if	((((0 == day && 6 <= hour && 23 >= hour) || (1 == day && 0 >= hour))||((1 == day && 6 <= hour && 23 >= hour)|| (2 == day && 0 >= hour))||((2 == day && 6 <= hour && 23 >= hour)|| (3 == day && 0 >= hour))||((3 == day && 6 <= hour && 23 >= hour)|| (4 == day && 0 >= hour))||((4 == day && 6 <= hour && 23 >= hour)	||(5 == day && 0 >= hour))||((5 == day && 6 <= hour && 23 >= hour)|| (6 == day && 2 >= hour))||((6 == day && 6 <= hour && 23 >= hour)|| (0 == day && 2 >= hour))) &&
+		( a === "All of Wausau"|| a === "Wausau") &&
+	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
+		c >= 1 &&
 		d) {
 		slot.classList.remove("hide");
         slot.classList.add("specificEventWausau");
@@ -461,7 +532,7 @@ function TacoBellWausau() {
     		slot.classList.add("hide");
     }
 }
-/* Cruisin 1724 (checked) */
+/* Cruisin 1724 x*/
 function CruisinSeventeenTwentyFour() {
 	var slot = document.getElementById("CruisinSeventeenTwentyFour");
     var now = new Date();
@@ -471,11 +542,11 @@ function CruisinSeventeenTwentyFour() {
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
-	/* (Sun) 12pm-2am  (Mon-Thur) 3pm-2am (Fri) 3pm-2:30am (Sat) 12pm-2:30am */
-	if((((0 == day && 11 <= hour && 23 >= hour)||(1 == day && 1 >= hour))||((1 == day && 2 <= hour && 23 >= hour)||(2 == day && 1 >= hour))||((2 == day && 2 <= hour && 23 >= hour)||(3 == day && 1 >= hour))||((3 == day && 2 <= hour && 23 >= hour)||(4 == day && 1 >= hour))||((4 == day && 2 <= hour && 23 >= hour)||(5 == day && 1 >= hour))||((5 == day && 2 <= hour && 23 >= hour)||(6 == day && 1 >= hour))||((6 == day && 11 <= hour && 23 >= hour)||(0 == day && 1 >= hour)))&&
-		(a === "All of Wausau"|| a === "Wausau")&&
-	    (b === "Under 18" || b === "18-20" || b === "21 and Over")&&
-		(c >= 15)&&
+	/* (Mon-Thur) 3pm-2am (Fri) 3pm-2:30am (Sat) 12pm-2:30am (Sun) 12pm-2am */
+	if((((0 == day && 11 <= hour && 23 >= hour) || (1 == day && 1 >= hour))||((1 == day && 2 <= hour && 23 >= hour)|| (2 == day && 1 >= hour))||((2 == day && 2 <= hour && 23 >= hour)|| (3 == day && 1 >= hour))||((3 == day && 2 <= hour && 23 >= hour)|| (4 == day && 1 >= hour))||((4 == day && 2 <= hour && 23 >= hour)|| (5 == day && 1 >= hour))|| ((5 == day && 2 <= hour && 23 >= hour)|| (6 == day && 2 >= hour))||((6 == day && 11 <= hour && 23 >= hour)|| (0 == day && 1 >= hour)))&&
+		( a === "All of Wausau"|| a === "Wausau") &&
+	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
+		c >= 15 &&
 		d){
 		slot.classList.remove("hide");
         slot.classList.add("specificEventWausau");
@@ -484,7 +555,7 @@ function CruisinSeventeenTwentyFour() {
     		slot.classList.add("hide");
     }
 }
-/* Sawadee Thai Restaurant (checked) */
+/* Sawadee Thai Restaurant x*/
 function SawadeeThaiRestaurant() {
 	var slot = document.getElementById("SawadeeThaiRestaurnat");
     var now = new Date();
@@ -495,8 +566,8 @@ function SawadeeThaiRestaurant() {
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
 	/* Hours (Sun - Thurs) 11am - 8pm   (Fri - Sat) 11am - 9pm */
-	if(((0 == day && 10 <= hour && 19 >= hour)||(1 == day && 10 <= hour && 19 >= hour)||(2 == day && 10 <= hour && 19 >= hour)||(3 == day && 10 <= hour && 19 >= hour)||(4 == day && 10 <= hour && 19 >= hour)||(5 == day && 10 <= hour && 20 >= hour)||(6 == day && 10 <= hour && 20 >= hour))&&
-		( a === "All of Wausau"|| a === "Wausau")&&
+	if(((0 == day && 10 <= hour && 19 >= hour)||(1 == day && 10 <= hour && 19 >= hour)||(2 == day && 10 <= hour && 19 >= hour)||(3 == day && 10 <= hour && 19 >= hour)||(4 == day && 10 <= hour && 19 >= hour)||(5 == day && 10 <= hour && 20 >= hour)||(6 == day && 10 <= hour && 20 >= hour)) &&
+		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 10 &&
 		d){
@@ -507,7 +578,7 @@ function SawadeeThaiRestaurant() {
     		slot.classList.add("hide");
 	}
 }
-/* Opa! Gyros (checked) */
+/* Opa! Gyros x*/
 function OpaGyros() {
 	var slot = document.getElementById("OpaGyros");
     var now = new Date();
@@ -518,7 +589,7 @@ function OpaGyros() {
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
 	/* (Mon-Sat) 11am-8pm */
-	if((( 1 == day && 10 <= hour && 19 >= hour )||( 2 == day && 10 <= hour && 19 >= hour )||( 3 == day && 10 <= hour && 19 >= hour )||( 4 == day && 10 <= hour && 19 >= hour )||( 5 == day && 10 <= hour && 19 >= hour )||( 6 == day && 10 <= hour && 19 >= hour ))&&
+	if((( 1 == day && 10 <= hour && 19 >= hour )||( 2 == day && 10 <= hour && 19 >= hour )||( 3 == day && 10 <= hour && 19 >= hour )||( 4 == day && 10 <= hour && 19 >= hour )||( 5 == day && 10 <= hour && 19 >= hour )||( 6 == day && 10 <= hour && 19 >= hour )) &&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 4 &&
@@ -530,7 +601,7 @@ function OpaGyros() {
     		slot.classList.add("hide");
 	}
 }
-/* Briq's Soft Serve (checked) */
+/* Briq's Soft Serve x*/
 function BriqsSoftServeWausau() {
 	var slot = document.getElementById("BriqsSoftServeWausau");
     var now = new Date();
@@ -542,7 +613,7 @@ function BriqsSoftServeWausau() {
 	var d = document.getElementById("choiceIcecream").checked;
 	var e = document.getElementById("choiceOutsideActivity").checked;
 	/* (Sun-Thur) 10am-10pm (Fri & Sat) 10am-11pm */
-	if((( 0 == day && 9 <= hour && 21 >= hour)||( 1 == day && 9 <= hour && 21 >= hour)||( 2 == day && 9 <= hour && 21 >= hour)||( 3 == day && 9 <= hour && 21 >= hour)||( 4 == day && 9 <= hour && 21 >= hour)||( 5 == day && 9 <= hour && 22 >= hour)||( 6 == day && 9 <= hour && 22 >= hour))&&
+	if((( 0 == day && 9 <= hour && 19 >= hour)||( 1 == day && 9 <= hour && 19 >= hour)||( 2 == day && 9 <= hour && 19 >= hour)||( 3 == day && 9 <= hour && 19 >= hour)||( 4 == day && 9 <= hour && 19 >= hour )||( 5 == day && 9 <= hour && 20 >= hour )||( 6 == day && 9 <= hour && 20 >= hour )) &&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 3 &&
@@ -554,7 +625,7 @@ function BriqsSoftServeWausau() {
     		slot.classList.add("hide");
 	}
 }
-/* Monk Botanical Gardens (checked) */
+/* Monk Botanical Gardens x*/
 function MonkBotanicalGardens() {
 	var slot = document.getElementById("MonkBotanicalGardens");
     var now = new Date();
@@ -577,7 +648,7 @@ function MonkBotanicalGardens() {
     		slot.classList.add("hide");
 	}
 }
-/* Schofield Park (checked) */
+/* Schofield Park x*/
 function SchofieldPark() {
 	var slot = document.getElementById("SchofieldPark");
     var now = new Date();
@@ -600,7 +671,7 @@ function SchofieldPark() {
     		slot.classList.add("hide");
 	}
 }
-/* Aftershock Bar (checkec) */
+/* Aftershock Bar x*/
 function AftershockBar() {
 	var slot = document.getElementById("AftershockBar");
     var now = new Date();
@@ -611,9 +682,9 @@ function AftershockBar() {
 	var c = document.getElementById("spending").value;
 	var g = document.getElementById("choiceBar").checked;
 	/* (Sun) 12pm-9pm (Mon & Tues) 2pm-12am (Wed & Thurs) 2pm-1am (Fri) 2pm-2:30am (Sat) 12pm-2:30am */
-	if(((0 == day && 11 <= hour && 20 >= hour)||(1 == day && 13 <= hour && 23 >= hour)||(2 == day && 13 <= hour && 23 >= hour)||((3 == day && 13 <= hour && 23 >= hour)||(4 == day && 0 == hour))||((4 == day && 13 <= hour && 23 >= hour)||(5 == day && 0 == hour))||((5 == day && 13 <= hour && 23 >= hour)||(6 == day && 1 >= hour))||((6 == day && 11 <= hour && 23 >= hour)||(0 == day && 1 >= hour)))&&
-		(a === "All of Wausau"|| a === "Wausau")&&
-	    (b === "21 and Over")&&
+	if((( 0 == day && 11 <= hour && 20 >= hour ) ||( 1 == day && 13 <= hour && 23 >= hour ) ||( 2 == day && 13 <= hour && 23 >= hour ) || ( ( 3 == day && 13 <= hour && 23 >= hour ) || ( 4 == day && 0 == hour ) )||(( 4 == day && 13 <= hour && 23 >= hour ) ||( 5 == day && 0 == hour ))||(( 5 == day && 13 <= hour && 23 >= hour )||( 6 == day && 1 >= hour ))||(( 6 == day && 11 <= hour && 23 >= hour )||( 0 == day && 1 >= hour )))&&
+		( a === "All of Wausau"|| a === "Wausau") &&
+	    ( b === "21 and Over" )&&
 		c >= 15 &&
 		g){
 		slot.classList.remove("hide");
@@ -623,7 +694,7 @@ function AftershockBar() {
     		slot.classList.add("hide");
 	}
 }
-/* Schulenberg Park (checked) */
+/* Schulenberg Park x*/
 function SchulenbergPark() {
 	var slot = document.getElementById("SchulenbergPark");
     var now = new Date();
@@ -646,7 +717,7 @@ function SchulenbergPark() {
     		slot.classList.add("hide");
 	}
 }
-/* A & W (checked) */
+/* A & W x*/
 function AAndW() {
 	var slot = document.getElementById("AAndW");
     var now = new Date();
@@ -657,7 +728,7 @@ function AAndW() {
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
 	/* (Mon - Sat) 10am-10pm (Sun) 11am-9pm */ 
-	if((( 0 == day && 10 <= hour && 20 >= hour)||( 1 == day && 9 <= hour && 21 >= hour)||( 2 == day && 9 <= hour && 21 >= hour )||( 3 == day && 9 <= hour && 21 >= hour )||( 4 == day && 9 <= hour && 21 >= hour )||( 5 == day && 9 <= hour && 21 >= hour )||( 6 == day && 9 <= hour && 21 >= hour ))&&
+	if((( 0 == day && 10 <= hour && 20 >= hour )||( 1 == day && 9 <= hour && 21 >= hour )||( 2 == day && 9 <= hour && 21 >= hour )|| ( 3 == day && 9 <= hour && 21 >= hour )||( 4 == day && 9 <= hour && 21 >= hour )|| ( 5 == day && 9 <= hour && 21 >= hour )||( 6 == day && 9 <= hour && 21 >= hour ))&&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 5 &&
@@ -669,7 +740,7 @@ function AAndW() {
     		slot.classList.add("hide");
 	}
 }
-/* Blue Willow Cafe (checked) */
+/* Blue Willow Cafe x*/
 function BlueWillowCafe() {
 	var slot = document.getElementById("BlueWillowCafe");
     var now = new Date();
@@ -679,8 +750,7 @@ function BlueWillowCafe() {
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
-	/* Everyday 6am-9pm */
-	if((5 <= hour && 20 >= hour)&&
+	if((5 <= hour && 21 >= hour)&&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 5 &&
@@ -695,7 +765,7 @@ function BlueWillowCafe() {
 }
 /* AF x */
 /* AG */
-/* Culvers (checked) */
+/* Culvers x*/
 function CulversWausau() {
 	var slot = document.getElementById("CulversWausau");
     var now = new Date();
@@ -706,9 +776,8 @@ function CulversWausau() {
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
 	var e = document.getElementById("choiceIcecream").checked;
-	/* Everyday 10am-10pm */
 	if((9 <= hour & 21 >= hour)&&
-		(a === "All of Wausau"|| a === "Wausau") &&
+		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 5 &&
 		(d || e)){
@@ -719,7 +788,7 @@ function CulversWausau() {
     		slot.classList.add("hide");
 	}
 }
-/* County Coin and Collectibles (checked) */
+/* County Coin and Collectibles x*/
 function CountyCoinAndCollectibles() {
 	var slot = document.getElementById("CountyCoinAndCollectibles");
     var now = new Date();
@@ -730,7 +799,7 @@ function CountyCoinAndCollectibles() {
 	var c = document.getElementById("spending").value;
 	var e = document.getElementById("choiceShopping").checked;
 	/* Mon-Thurs 8am-3pm Fri 8am-12pm Sat & Sun Closed */
-	if(((1 == day && 7 <= hour && 14 >= hour)||(2 == day && 7 <= hour && 14 >= hour)||(3 == day && 7 <= hour && 14 >= hour)||(4 == day && 7 <= hour && 14 >= hour)||(5 == day && 7 <= hour && 11 >= hour))&&
+	if(((1 == day && 7 <= hour && 14 >= hour) ||(2 == day && 7 <= hour && 14 >= hour) ||(3 == day && 7 <= hour && 14 >= hour) ||(4 == day && 7 <= hour && 14 >= hour) ||(5 == day && 7 <= hour && 11 >= hour))&&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		e){
@@ -741,7 +810,7 @@ function CountyCoinAndCollectibles() {
     		slot.classList.add("hide");
 	}
 }
-/* Jemma's Cafe (checked) */
+/* Jemma's Cafe x*/
 function JemmasCafe() {
 	var slot = document.getElementById("JemmasCafe");
     var now = new Date();
@@ -753,7 +822,7 @@ function JemmasCafe() {
 	var d = document.getElementById("choiceEat").checked;
 	var e = document.getElementById("choiceIcecream").checked;
 	/* Mon 10:30am-3pm Tues-Thurs 10:30am-8pm Fri&Sat 10:30-9pm Sun (closed)*/
-	if((( 1 == day && 10 <= hour && 14 >= hour)||( 2 == day && 10 <= hour && 19 >= hour)||( 3 == day && 10 <= hour && 19 >= hour)||( 4 == day && 10 <= hour && 19 >= hour)||( 5 == day && 10 <= hour && 20 >= hour)||( 6 == day && 10 <= hour && 20 >= hour))&&
+	if((( 1 == day && 9 <= hour && 14 >= hour)||( 2 == day && 9 <= hour && 19 >= hour)||( 3 == day && 9 <= hour && 19 >= hour)||( 4 == day && 9 <= hour && 19 >= hour)|| ( 5 == day && 9 <= hour && 20 >= hour)||( 6 == day && 9 <= hour && 20 >= hour))&&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 8 &&
@@ -765,7 +834,7 @@ function JemmasCafe() {
     		slot.classList.add("hide");
 	}
 }
-/* Bethesda Thrift Shop (checked)*/
+/* Bethesda Thrift Shop x*/
 function BethesdaThriftShop() {
 	var slot = document.getElementById("BethesdaThriftShop");
     var now = new Date();
@@ -776,7 +845,7 @@ function BethesdaThriftShop() {
 	var c = document.getElementById("spending").value;
 	var f = document.getElementById("choiceShopping").checked;
 	/* Mon&Thur 10am-6pm Tues-Wed&Fri 10am-5pm Sat 11am-4pm Sun closed */
-	if(((1 == day && 9 <= hour && 17 >= hour)||(2 == day && 9 <= hour && 16 >= hour)||(3 == day && 9 <= hour && 16 >= hour)||(4 == day && 9 <= hour && 17 >= hour)||(5 == day && 9 <= hour && 16 >= hour)||(6 == day && 10 <= hour && 15 >= hour))&&
+	if(((1 == day && 9 <= hour && 17 >= hour) ||(2 == day && 9 <= hour && 16 >= hour) ||(3 == day && 9 <= hour && 16 >= hour) || (4 == day && 9 <= hour && 17 >= hour) || (5 == day && 9 <= hour && 16 >= hour) ||(6 == day && 10 <= hour && 15 >= hour))&&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		f){
@@ -787,7 +856,7 @@ function BethesdaThriftShop() {
     		slot.classList.add("hide");
 	}
 }
-/* Liberty Bell Coin Investments (checked) */
+/* Liberty Bell Coin Investments x*/
 function LibertyBellCoinInvestments() {
 	var slot = document.getElementById("LibertyBellCoinInvestments");
     var now = new Date();
@@ -809,7 +878,7 @@ function LibertyBellCoinInvestments() {
     		slot.classList.add("hide");
 	}
 }
-/* 101 Pub (checked) */
+/* 101 Pub x*/
 function OneohOnePub() {
 	var slot = document.getElementById("OneohOnePub");
     var now = new Date();
@@ -820,8 +889,7 @@ function OneohOnePub() {
 	var c = document.getElementById("spending").value;
 	var g = document.getElementById("choiceBar").checked;
 	/* Sun-Thurs 8am-2am Fri&Sat 8am-2:30am */
-	if(
-		((1 >= hour)||(7 <= hour && 23 >= hour))&&
+	if((((0 == day && 7 <= hour && 23 >= hour)||(1 == day && 1 >= hour))||((1 == day && 7 <= hour && 23 >= hour)||(2 == day && 1 >= hour))||((2 == day && 7 <= hour && 23 >= hour)||(3 == day && 1 >= hour))||((3 == day && 7 <= hour && 23 >= hour)||(4 == day && 1 >= hour))||((4 == day && 7 <= hour && 23 >= hour)||(5 == day && 1 >= hour))||((5 == day && 7 <= hour && 23 >=hour)||(6 == day && 1 >= hour))||((6 == day && 7 <= hour && 23 >= hour)||(0 == day && 1 >= hour)))&&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	     b === "21 and Over"  &&
 		c >= 15 &&
@@ -834,7 +902,7 @@ function OneohOnePub() {
 	}
 }
 /* AN x*/
-/* The Glass Station (checked) */
+/* The Glass Station x*/
 function TheGlassStation() {
 	var slot = document.getElementById("TheGlassStation");
     var now = new Date();
@@ -857,7 +925,7 @@ function TheGlassStation() {
 	}
 }
 /* AP x*/
-/* Sams Pizza of Wausau  (checked) */
+/* Sams Pizza of Wausau x*/
 function SamsPizzaOfWausau() {
 	var slot = document.getElementById("SamsPizzaOfWausau");
     var now = new Date();
@@ -880,7 +948,7 @@ function SamsPizzaOfWausau() {
     		slot.classList.add("hide");
 	}
 }
-/* Eastbay (checked) */
+/* Eastbay x*/
 function Eastbay() {
 	var slot = document.getElementById("Eastbay");
     var now = new Date();
@@ -903,7 +971,7 @@ function Eastbay() {
 	}
 }
 /* AS */
-/* Mandarine Chinese Restaurant (checked) */
+/* Mandarine Chinese Restaurant x*/
 function MandarineChineseRestaurant() {
 	var slot = document.getElementById("MandarineChineseRestaurant");
     var now = new Date();
@@ -914,7 +982,7 @@ function MandarineChineseRestaurant() {
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
 	/* Mon-Fri 11am-2:30pm & 4pm-9pm Sat 11am-9pm */
-	if((((1 == day && 10 <= hour && 13 >= hour)||(1 == day && 15 <= hour && 20 >= hour))||((2 == day && 10 <= hour && 13 >= hour)||(2 == day && 15 <= hour && 20 >= hour))||((3 == day && 10 <= hour && 13 >= hour)||(3 == day && 15 <= hour && 20 >= hour))||((4 == day && 10 <= hour && 13 >= hour)||(4 == day && 15 <= hour && 20 >= hour))||((5 == day && 10 <= hour && 13 >= hour)||(5 == day && 15 <= hour && 20 >= hour))||(6 == day && 10 <= hour && 20 >= hour))&&
+	if((((1 == day && 10 <= hour && 13 >= hour) || (1 == day && 15 <= hour && 20 >= hour))||((2 == day && 10 <= hour && 13 >= hour) || (2 == day && 15 <= hour && 20 >= hour))||((3 == day && 10 <= hour && 13 >= hour) || (3 == day && 15 <= hour && 20 >= hour))||((4 == day && 10 <= hour && 13 >= hour) || (4 == day && 15 <= hour && 20 >= hour))||((5 == day && 10 <= hour && 13 >= hour) || (5 == day && 15 <= hour && 20 >= hour))||(6 == day && 10 <= hour && 20 >= hour))&&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 7 &&
@@ -926,7 +994,7 @@ function MandarineChineseRestaurant() {
     		slot.classList.add("hide");
 	}
 }
-/* October Guitar (checked) */
+/* October Guitar x*/
 function OctoberGuitar() {
 	var slot = document.getElementById("OctoberGuitar");
     var now = new Date();
@@ -948,7 +1016,7 @@ function OctoberGuitar() {
     		slot.classList.add("hide");
 	}
 }
-/* Quilting Workshop (checked) */
+/* Quilting Workshop x*/
 function QuiltingWorkshop() {
 	var slot = document.getElementById("QuiltingWorkshop");
     var now = new Date();
@@ -970,7 +1038,7 @@ function QuiltingWorkshop() {
     		slot.classList.add("hide");
 	}
 }
-/* Lavender & Lace Antiques (checked) */
+/* Lavender & Lace Antiques x*/
 function LavenderAndLaceAntiques() {
 	var slot = document.getElementById("LavenderAndLaceAntiques");
     var now = new Date();
@@ -992,7 +1060,7 @@ function LavenderAndLaceAntiques() {
     		slot.classList.add("hide");
 	}
 }
-/* Dominos Pizza (checked) */
+/* Dominos Pizza x*/
 function DominosPizzaWausau() {
 	var slot = document.getElementById("DominosPizzaWausau");
     var now = new Date();
@@ -1003,7 +1071,7 @@ function DominosPizzaWausau() {
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
 	/* Sun-Thurs 10:30am-12am Fri-Sat 10:30-2am */
-	if(((0 == day && 10 <= hour && 23 >= hour)||(1 == day && 10 <= hour && 23 >= hour)||(2 == day && 10 <= hour && 23 >= hour)||(3 == day && 10 <= hour && 23 >= hour)||(4 == day && 10 <= hour && 23 >= hour)||((5 == day && 10 <= hour && 23 >= hour)||(6 == day && 1 >= hour))||((6 == day && 10 <= hour && 23 >= hour)||(0 == day && 1 >= hour)))&&
+	if(((0 == day && 10 <= hour && 23 >= hour)||(1 == day && 10 <= hour && 23 >= hour)||(2 == day && 10 <= hour && 23 >= hour)|| (3 == day && 10 <= hour && 23 >= hour)||(4 == day && 10 <= hour && 23 >= hour)||((5 == day && 10 <= hour && 23 >= hour)||(6 == day && 1 >= hour))||((6 == day && 10 <= hour && 23 >= hour)||(0 == day && 1 >= hour)))&&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 7 &&
@@ -1015,7 +1083,7 @@ function DominosPizzaWausau() {
     		slot.classList.add("hide");
 	}
 }
-/* Navieve Fromagerie (checked) */
+/* Navieve Fromagerie x*/
 function NavieveFromagerie() {
 	var slot = document.getElementById("NavieveFromagerie");
     var now = new Date();
@@ -1026,9 +1094,9 @@ function NavieveFromagerie() {
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
 	/* Tues-Fri 10am-6pm Sat 9am-3pm */
-	if(((2 == day && 9 <= hour && 17 >= hour)||(3 == day && 9 <= hour && 17 >= hour)||(4 == day && 9 <= hour && 17 >= hour)||(5 == day && 9 <= hour && 17 >= hour)||(6 == day && 8 <= hour && 14 >= hour))&&
+	if(((2 == day && 9 <= hour && 17 >= hour)||(3 == day && 9 <= hour && 17 >= hour)||(4 == day && 9 <= hour && 17 >= hour)||(5 == day && 9 <= hour && 17 >= hour)||(6 == day && 9 <= hour && 14 >= hour))&&
 		( a === "All of Wausau"|| a === "Wausau") &&
-	    (b === "Under 18" ||b === "18-20" || b === "21 and Over" )&&
+	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 10 &&
 		d){
 		slot.classList.remove("hide");
@@ -1038,7 +1106,7 @@ function NavieveFromagerie() {
     		slot.classList.add("hide");
 	}
 }
-/* KFC (checked) */
+/* KFC x*/
 function KFCWausau() {
 	var slot = document.getElementById("KFCWausau");
     var now = new Date();
@@ -1061,7 +1129,7 @@ function KFCWausau() {
     		slot.classList.add("hide");
 	}
 }
-/* River District Antique Mall (checked) */
+/* River District Antique Mall x*/
 function RiverDisctrictAntiqueMall() {
 	var slot = document.getElementById("RiverDistrictAntiqueMall");
     var now = new Date();
@@ -1072,7 +1140,8 @@ function RiverDisctrictAntiqueMall() {
 	var c = document.getElementById("spending").value;
 	var f = document.getElementById("choiceShopping").checked;
 	/* Tues-Sat 10am-4pm */
-	if(((2 == day && 9 <= hour && 15 >= hour)||(3 == day && 9 <= hour && 15 >= hour)||(4 == day && 9 <= hour && 15 >= hour)||(5 == day && 9 <= hour && 15 >= hour)||(6 == day && 9 <= hour && 15 >= hour))&&
+	if(((2 == day && 9 <= hour && 15 >= hour)||(3 == day && 9 <= hour && 15 >= hour)|| (4 == day && 9 <= hour && 15 >= hour)||(5 == day && 9 <= hour && 15 >= hour)||(6 == day && 9 <= hour && 15 >= hour)
+		)&&
 		(a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		f){
@@ -1083,7 +1152,7 @@ function RiverDisctrictAntiqueMall() {
     		slot.classList.add("hide");
 	}
 }
-/* Dime & Dollar Thrift Store (checked) */
+/* Dime & Dollar Thrift Store x*/
 function DimeAndDollarThriftStore() {
 	var slot = document.getElementById("DimeAndDollarThriftStore");
     var now = new Date();
@@ -1094,7 +1163,8 @@ function DimeAndDollarThriftStore() {
 	var c = document.getElementById("spending").value;
 	var f = document.getElementById("choiceShopping").checked;
 	/* Mon 10am-7pm Tues-Sat 10am-4pm */
-	if(((1 == day && 9 <= hour && 18 >= hour)||(2 == day && 9 <= hour && 15 >= hour)||(3 == day && 9 <= hour && 15 >= hour)||(4 == day && 9 <= hour && 15 >= hour)||(5 == day && 9 <= hour && 15 >= hour)||(6 == day && 9 <= hour && 15 >= hour))&&
+	if(((1 == day && 9 <= hour && 18 >= hour)||(2 == day && 9 <= hour && 15 >= hour)||(3 == day && 9 <= hour && 15 >= hour)||(4 == day && 9 <= hour && 15 >= hour)||(5 == day && 9 <= hour && 15 >= hour)||(6 == day && 9 <= hour && 15 >= hour)
+		)&&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		f){
@@ -1106,7 +1176,7 @@ function DimeAndDollarThriftStore() {
 	}
 }
 /* BC x*/
-/* Reservoir Park (checked) */
+/* Reservoir Park x*/
 function ReservoirPark() {
 	var slot = document.getElementById("ReservoirPark");
     var now = new Date();
@@ -1128,7 +1198,7 @@ function ReservoirPark() {
     		slot.classList.add("hide");
 	}
 }
-/* Starbucks (checked) */
+/* Starbucks x*/
 function StarbucksWausau() {
 	var slot = document.getElementById("StarbucksWausau");
     var now = new Date();
@@ -1151,7 +1221,7 @@ function StarbucksWausau() {
     		slot.classList.add("hide");
 	}
 }
-/* King Buffet (checked) */
+/* King Buffet x*/
 function KingBuffet() {
 	var slot = document.getElementById("KingBuffet");
     var now = new Date();
@@ -1174,7 +1244,7 @@ function KingBuffet() {
     		slot.classList.add("hide");
 	}
 }
-/* Royal Nails & Spa (checked)*/
+/* Royal Nails & Spa x*/
 function RoyalNailsAndSpa() {
 	var slot = document.getElementById("RoyalNailsAndSpa");
     var now = new Date();
@@ -1198,7 +1268,7 @@ function RoyalNailsAndSpa() {
 	}
 }
 /* BH x*/
-/* La Taqueria (checked) */
+/* La Taqueria x*/
 function LaTaqueria() {
 	var slot = document.getElementById("LaTaqueria");
     var now = new Date();
@@ -1210,8 +1280,8 @@ function LaTaqueria() {
 	var d = document.getElementById("choiceEat").checked;
 	/* Sun 10:30pm-8pm Mon Closed Tues-Thurs 11am-9pm Fri& Sat 11am-10pm*/
 	if(((0 == day && 10 <= hour && 19 >= hour)||(2 == day && 10 <= hour && 20 >= hour)||(3 == day && 10 <= hour && 20 >= hour)||(4 == day && 10 <= hour && 20 >= hour)||(5 == day && 10 <= hour && 21 >= hour)||(6 == day && 10 <= hour && 21 >= hour))&&
-		(a === "All of Wausau"|| a === "Wausau")&&
-	    (b === "Under 18" || b === "18-20" || b === "21 and Over")&&
+		( a === "All of Wausau"|| a === "Wausau") &&
+	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 3 &&
 		d){
 		slot.classList.remove("hide");
@@ -1221,7 +1291,7 @@ function LaTaqueria() {
     		slot.classList.add("hide");
 	}
 }
-/* Great Dane (checked) */
+/* Great Dane x*/
 function GreatDane() {
 	var slot = document.getElementById("GreatDane");
     var now = new Date();
@@ -1233,7 +1303,22 @@ function GreatDane() {
 	var d = document.getElementById("choiceEat").checked;
 	var g = document.getElementById("choiceBar").checked;
 	/* Sun-Thurs 11am-12am Fri & Sat 11am-2:30am */
-	if(((0 == day && 10 <= hour && 23 >= hour)||(1 == day && 10 <= hour && 23 >= hour)||(2 == day && 10 <= hour && 23 >= hour)||(3 == day && 10 <= hour && 23 >= hour)||(4 == day && 10 <= hour && 23 >= hour)||((5 == day && 10 <= hour && 23 >= hour)||(6 == day && 1 >= hour))||((6 == day && 10 <= hour && 23 >= hour)||(0 == day && 1 >= hour)))&&
+	if(
+		(
+			(0 == day && 10 <= hour && 23 >= hour)||
+			(1 == day && 10 <= hour && 23 >= hour)||
+			(2 == day && 10 <= hour && 23 >= hour)||
+			(3 == day && 10 <= hour && 23 >= hour)||
+			(4 == day && 10 <= hour && 23 >= hour)||
+			(
+				(5 == day && 10 <= hour && 23 >= hour)||
+				(6 == day && 1 >= hour)
+			)||
+			(
+				(6 == day && 10 <= hour && 23 >= hour)||
+				(0 == day && 1 >= hour)
+			)
+			)&&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    ( b === "18-20" || b === "21 and Over" )&&
 		c >= 25 &&
@@ -1246,7 +1331,7 @@ function GreatDane() {
 	}
 }
 /* BK x*/
-/* Treu's Tic Toc Club (checked) */
+/* Treu's Tic Toc Club x*/
 function TreusTicTocClub() {
 	var slot = document.getElementById("TreusTicTocClub");
     var now = new Date();
@@ -1270,7 +1355,7 @@ function TreusTicTocClub() {
     		slot.classList.add("hide");
 	}
 }
-/* Marathon Park (checked) */
+/* Marathon Park x*/
 function MarathonPark() {
 	var slot = document.getElementById("MarathonPark");
     var now = new Date();
@@ -1292,7 +1377,7 @@ function MarathonPark() {
     		slot.classList.add("hide");
 	}
 }
-/* The Red Apple Family Restraurant (checked) */
+/* The Red Apple Family Restraurant x*/
 function TheRedAppleFamilyRestaurant() {
 	var slot = document.getElementById("TheRedAppleFamilyRestaurant");
     var now = new Date();
@@ -1315,7 +1400,7 @@ function TheRedAppleFamilyRestaurant() {
     		slot.classList.add("hide");
 	}
 }
-/* Rice's Antiques & Architechtural Salvage (checked) */
+/* Rice's Antiques & Architechtural Salvage x*/
 function RicesAntiquesAndArchitechturalSalvage() {
 	var slot = document.getElementById("RicesAntiquesAndArchitechturalSalvage");
     var now = new Date();
@@ -1337,7 +1422,7 @@ function RicesAntiquesAndArchitechturalSalvage() {
     		slot.classList.add("hide");
 	}
 }
-/* Riverside Park (checked) */
+/* Riverside Park x*/
 function RiversidePark() {
 	var slot = document.getElementById("RiversidePark");
     var now = new Date();
@@ -1359,7 +1444,7 @@ function RiversidePark() {
     		slot.classList.add("hide");
 	}
 }
-/* Hmong Eggroll (checked) */
+/* Hmong Eggroll x*/
 function HmongEggroll() {
 	var slot = document.getElementById("HmongEggroll");
     var now = new Date();
@@ -1385,7 +1470,7 @@ function HmongEggroll() {
 /* BR x*/
 /* BS x*/
 /* BT x*/
-/* Lil Devil's Glass (checked) */
+/* Lil Devil's Glass x*/
 function LilDevilsGlass() {
 	var slot = document.getElementById("LilDevilsGlass");
     var now = new Date();
@@ -1407,8 +1492,7 @@ function LilDevilsGlass() {
     		slot.classList.add("hide");
 	}
 }
-/* St. Vincent De Paul of Wausau (checked) 
-*/
+/* St. Vincent De Paul of Wausau x*/
 function StVincentDePaulOfWausau() {
 	var slot = document.getElementById("StVincentDePaulOfWausau");
     var now = new Date();
@@ -1430,7 +1514,7 @@ function StVincentDePaulOfWausau() {
     		slot.classList.add("hide");
 	}
 }
-/* Dairy Queen Store (checked)*/
+/* Dairy Queen Store x*/
 function DairyQueenStore() {
 	var slot = document.getElementById("DairyQueenStore");
     var now = new Date();
@@ -1453,7 +1537,7 @@ function DairyQueenStore() {
     		slot.classList.add("hide");
 	}
 }
-/* Central Wisconsin Water Walkers (checked) */
+/* Central Wisconsin Water Walkers x*/
 function CentralWisconsinWaterWalkers() {
 	var slot = document.getElementById("CentralWisconsinWaterWalkers");
     var now = new Date();
@@ -1473,7 +1557,7 @@ function CentralWisconsinWaterWalkers() {
     		slot.classList.add("hide");
 	}
 }
-/* DC Everest Country Park (checked) */
+/* DC Everest Country Park x*/
 function DCEverestCountryPark() {
 	var slot = document.getElementById("DCEverestCountryPark");
     var now = new Date();
@@ -1495,7 +1579,7 @@ function DCEverestCountryPark() {
     		slot.classList.add("hide");
 	}
 }
-/* Three "M" Park (checked) */
+/* Three "M" Park x*/
 function ThreeMPark() {
 	var slot = document.getElementById("ThreeMPark");
     var now = new Date();
@@ -1517,7 +1601,7 @@ function ThreeMPark() {
     		slot.classList.add("hide");
 	}
 }
-/* Lumpy's (checked) */
+/* Lumpy's x*/
 function Lumpys() {
 	var slot = document.getElementById("Lumpys");
     var now = new Date();
@@ -1543,7 +1627,7 @@ function Lumpys() {
 /* CB x*/
 /* CC x*/
 /* CD x*/
-/* BB Jack's Pizza and Sandwich Lounge (checked) */
+/* BB Jack's Pizza and Sandwich Lounge x*/
 function BBJacksPizzaAndSandwichLounge() {
 	var slot = document.getElementById("BBJacksPizzaAndSandwichLounge");
     var now = new Date();
@@ -1567,7 +1651,7 @@ function BBJacksPizzaAndSandwichLounge() {
 	}
 }
 /* CF x*/
-/* Sylvan Hill Park (checked) */
+/* Sylvan Hill Park x*/
 function SylvanHillPark() {
 	var slot = document.getElementById("SylvanHillPark");
     var now = new Date();
@@ -1578,7 +1662,7 @@ function SylvanHillPark() {
 	var c = document.getElementById("spending").value;
 	var f = document.getElementById("choicePark").checked
 	/* Everyday 6am-11pm */
-	if((5 <= hour && 22 >= hour)&&
+	if((6 <= hour && 22 >= hour)&&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		f){
@@ -1589,7 +1673,7 @@ function SylvanHillPark() {
     		slot.classList.add("hide");
 	}
 }
-/* Lucky's Eastside Pub (checked) */
+/* Lucky's Eastside Pub x*/
 function LuckysEastsidePub() {
 	var slot = document.getElementById("LuckysEastsidePub");
     var now = new Date();
@@ -1600,7 +1684,7 @@ function LuckysEastsidePub() {
 	var c = document.getElementById("spending").value;
 	var g = document.getElementById("choiceBar").checked;
 	/* Sun-Thurs 7am-2am Fri&Sat 7am-2:30am */
-	if(((6 <= hour && 23 >= hour)||(1 >=hour))&&
+	if(((( 6 <= hour && 23 >= hour)||(1 >=hour)))&&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    ( b === "21 and Over" )&&
 		c >= 15 &&
@@ -1612,7 +1696,7 @@ function LuckysEastsidePub() {
     		slot.classList.add("hide");
 	}
 }
-/* Gilbert Park (checked) */
+/* Gilbert Park x*/
 function GilbertPark() {
 	var slot = document.getElementById("GilbertPark");
     var now = new Date();
@@ -1634,7 +1718,7 @@ function GilbertPark() {
     		slot.classList.add("hide");
 	}
 }
-/* River Edge Walkway (checked) */
+/* River Edge Walkway x*/
 function RiverEdgeWalkway() {
 	var slot = document.getElementById("RiverEdgeWalkway");
     var now = new Date();
@@ -1656,7 +1740,7 @@ function RiverEdgeWalkway() {
     		slot.classList.add("hide");
 	}
 }
-/* Wausau Music Center (checked) */
+/* Wausau Music Center x*/
 function WausauMusicCenter() {
 	var slot = document.getElementById("WausauMusicCenter");
     var now = new Date();
@@ -1678,7 +1762,7 @@ function WausauMusicCenter() {
     		slot.classList.add("hide");
 	}
 }
-/* Divepoint Scuba Paddle & Adventure Center (checked) */
+/* Divepoint Scuba Paddle & Adventure Center x*/
 function DivepointScubaPaddleAndAdventureCenter() {
 	var slot = document.getElementById("DivepointScubaPaddleAndAdventureCenter");
     var now = new Date();
@@ -1701,7 +1785,7 @@ function DivepointScubaPaddleAndAdventureCenter() {
     		slot.classList.add("hide");
 	}
 }
-/* Thrive Foodery (checked) */
+/* Thrive Foodery x*/
 function ThriveFoodery() {
 	var slot = document.getElementById("ThriveFoodery");
     var now = new Date();
@@ -1725,7 +1809,7 @@ function ThriveFoodery() {
 	}
 }
 /* CN x*/
-/* Kaiser Pool (checked) */
+/* Kaiser Pool x*/
 function KaiserPool() {
 	var slot = document.getElementById("KaiserPool");
     var now = new Date();
@@ -1736,7 +1820,7 @@ function KaiserPool() {
 	var c = document.getElementById("spending").value;
 	var e = document.getElementById("choiceOutsideActivity").checked;
 	/* Mon&Tues 1pm-7:50pm Wed 1pm-8pm Thurs-Sun 1pm-7:50pm */
-	if((12 <= hour && 19 >= hour)&&
+	if((13 <= hour && 19 >= hour)&&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 2 &&
@@ -1748,7 +1832,7 @@ function KaiserPool() {
     		slot.classList.add("hide");
 	}
 }
-/* Bob & Randy's Bar (checked) */
+/* Bob & Randy's Bar x*/
 function BobAndRandysBar() {
 	var slot = document.getElementById("BobAndRandysBar");
     var now = new Date();
@@ -1771,7 +1855,7 @@ function BobAndRandysBar() {
     		slot.classList.add("hide");
 	}
 }
-/* Sixth Street Filling Station (checked) */
+/* Sixth Street Filling Station x*/
 function SixthStreetFillingStation() {
 	var slot = document.getElementById("SixthStreetFillingStation");
     var now = new Date();
@@ -1794,7 +1878,7 @@ function SixthStreetFillingStation() {
     		slot.classList.add("hide");
 	}
 }
-/* Loppnow's Bar (checked) */
+/* Loppnow's Bar x*/
 function LoppnowsBar() {
 	var slot = document.getElementById("LoppnowsBar");
     var now = new Date();
@@ -1819,7 +1903,7 @@ function LoppnowsBar() {
 }
 /* CS x*/
 /* CT x*/
-/* Subway (checked) */
+/* Subway x*/
 function SubwayWausauTwo() {
 	var slot = document.getElementById("SubwayWausauTwo");
     var now = new Date();
@@ -1843,7 +1927,7 @@ function SubwayWausauTwo() {
 	}
 }
 /* CV x*/
-/* Wausau on Water (checked) */
+/* Wausau on Water  x*/
 function WausauOnWater() {
 	var slot = document.getElementById("WausauOnWater");
     var now = new Date();
@@ -1869,7 +1953,7 @@ function WausauOnWater() {
 	}
 }
 /* CX x*/
-/* Black Purl (checked) */
+/* Black Purl x*/
 function BlackPurl() {
 	var slot = document.getElementById("BlackPurl");
     var now = new Date();
@@ -1891,7 +1975,7 @@ function BlackPurl() {
     		slot.classList.add("hide");
 	}
 }
-/* The Glass Hat (checked) */
+/* The Glass Hat x*/
 function TheGlassHat() {
 	var slot = document.getElementById("TheGlassHat");
     var now = new Date();
@@ -1914,7 +1998,7 @@ function TheGlassHat() {
     		slot.classList.add("hide");
 	}
 }
-/* Angelo's Family Pizzeria (checked) */
+/* Angelo's Family Pizzeria x*/
 function AngelosFamilyPizzeria(){
 	var slot = document.getElementById("AngelosFamilyPizzeria");
     var now = new Date();
@@ -1937,7 +2021,7 @@ function AngelosFamilyPizzeria(){
     		slot.classList.add("hide");
 	}
 }
-/* Hope Thrift Store (checked) */
+/* Hope Thrift Store x*/
 function HopeThriftStore() {
 	var slot = document.getElementById("HopeThriftStore");
     var now = new Date();
@@ -1947,7 +2031,7 @@ function HopeThriftStore() {
 	var b = document.getElementById("age").value; 
 	var f = document.getElementById("choiceShopping").checked;
 	/* Mon-Sat 10am-6pm */
-	if(((1 == day && 9 <= hour && 17 >= hour)||(2 == day && 9 <= hour && 17 >= hour)||(3 == day && 9 <= hour && 17 >= hour)||(4 == day && 9 <= hour && 17 >= hour)||(5 == day && 9 <= hour && 17 >= hour)||(6 == day && 9 <= hour && 17 >= hour))&&	
+	if(	((1 == day && 9 <= hour && 17 >= hour)||(2 == day && 9 <= hour && 17 >= hour)||(3 == day && 9 <= hour && 17 >= hour)||(4 == day && 9 <= hour && 17 >= hour)||(5 == day && 9 <= hour && 17 >= hour)||(6 == day && 9 <= hour && 17 >= hour))&&	
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		f){
@@ -1960,7 +2044,7 @@ function HopeThriftStore() {
 }
 /* DC x*/
 /* DD x*/
-/* Marathon County Historical Society (checked) */
+/* Marathon County Historical Society x*/
 function MarathonCountyHistoricalSociety() {
 	var slot = document.getElementById("MarathonCountyHistoricalSociety");
     var now = new Date();
@@ -1982,7 +2066,7 @@ function MarathonCountyHistoricalSociety() {
     		slot.classList.add("hide");
 	}
 }
-/* Yawkey House Museum (checked) */
+/* Yawkey House Museum x*/
 function YawkeyHouseMuseum() {
 	var slot = document.getElementById("YawkeyHouseMuseum");
     var now = new Date();
@@ -2004,7 +2088,7 @@ function YawkeyHouseMuseum() {
     		slot.classList.add("hide");
 	}
 }
-/* Barker-Stewart Island Park (checked) */
+/* Barker-Stewart Island Park x*/
 function BarkerStewartIslandPark() {
 	var slot = document.getElementById("BarkerStewartIslandPark");
     var now = new Date();
@@ -2026,7 +2110,7 @@ function BarkerStewartIslandPark() {
     		slot.classList.add("hide");
 	}
 }
-/* Big Bull Falls Park (checked) */
+/* Big Bull Falls Park x*/
 function BigBullFallsPark() {
 	var slot = document.getElementById("BigBullFallsPark");
     var now = new Date();
@@ -2048,7 +2132,7 @@ function BigBullFallsPark() {
     		slot.classList.add("hide");
 	}
 }
-/* Evolution In Design (checked) */
+/* Evolution In Design x*/
 function EvolutionInDesign() {
 	var slot = document.getElementById("EvolutionInDesign");
     var now = new Date();
@@ -2070,7 +2154,7 @@ function EvolutionInDesign() {
     		slot.classList.add("hide");
 	}
 }
-/* Nichole's Boutique (checked) */
+/* Nichole's Boutique x*/
 function NicholesBoutique() {
 	var slot = document.getElementById("NicholesBoutique");
     var now = new Date();
@@ -2092,7 +2176,7 @@ function NicholesBoutique() {
     		slot.classList.add("hide");
 	}
 }
-/* Back When Cafe (checked) */
+/* Back When Cafe x*/
 function BackWhenCafe() {
 	var slot = document.getElementById("BackWhenCafe");
     var now = new Date();
@@ -2115,7 +2199,7 @@ function BackWhenCafe() {
     		slot.classList.add("hide");
 	}
 }
-/* Sweets on Third (checked) */
+/* Sweets on Third x*/
 function SweetsOnThird() {
 	var slot = document.getElementById("SweetsOnThird");
     var now = new Date();
@@ -2138,7 +2222,7 @@ function SweetsOnThird() {
     		slot.classList.add("hide");
 	}
 }
-/* La Prima (checked) */
+/* La Prima x*/
 function LaPrima() {
 	var slot = document.getElementById("LaPrima");
     var now = new Date();
@@ -2161,7 +2245,7 @@ function LaPrima() {
     		slot.classList.add("hide");
 	}
 }
-/* Wausau Museum of Contemporary Art (checked) */
+/* Wausau Museum of Contemporary Art x*/
 function WausauMuseumOfContemporaryArt() {
 	var slot = document.getElementById("WausauMuseumOfContemporaryArt");
     var now = new Date();
@@ -2183,7 +2267,7 @@ function WausauMuseumOfContemporaryArt() {
     		slot.classList.add("hide");
 	}
 }
-/* Janke Book Store (checked) */
+/* Janke Book Store x*/
 function JankeBookStore () {
 	var slot = document.getElementById("JankeBookStore");
     var now = new Date();
@@ -2205,7 +2289,7 @@ function JankeBookStore () {
     		slot.classList.add("hide");
 	}
 }
-/* Shepherd & Schaller Sporting (checked) */
+/* Shepherd & Schaller Sporting x*/
 function ShepherdAndSchallerSporting() {
 	var slot = document.getElementById("ShepherdAndSchallerSporting");
     var now = new Date();
@@ -2227,7 +2311,7 @@ function ShepherdAndSchallerSporting() {
     		slot.classList.add("hide");
 	}
 }
-/* Leigh Yawkey Woodson Art Museum (checked) */
+/* Leigh Yawkey Woodson Art Museum x*/
 function LeighYawkeyWoodsonArtMuseum() {
 	var slot = document.getElementById("LeighYawkeyWoodsonArtMuseum");
     var now = new Date();
@@ -2249,7 +2333,7 @@ function LeighYawkeyWoodsonArtMuseum() {
     		slot.classList.add("hide");
 	}
 }
-/* The Grand Theater (checked) */
+/* The Grand Theater x*/
 function TheGrandTheater() {
 	var slot = document.getElementById("TheGrandTheater");
     var now = new Date();
@@ -2269,7 +2353,7 @@ function TheGrandTheater() {
     		slot.classList.add("hide");
 	}
 }
-/* Erbert and Gerbert's (checked) */
+/* Erbert and Gerbert's x*/
 function ErbertAndGerberts() {
 	var slot = document.getElementById("ErbertAndGerberts");
     var now = new Date();
@@ -2292,7 +2376,7 @@ function ErbertAndGerberts() {
     		slot.classList.add("hide");
 	}
 }
-/* Intermission (checked) */
+/* Intermission x*/
 function Intermission() {
 	var slot = document.getElementById("Intermission");
     var now = new Date();
@@ -2316,7 +2400,7 @@ function Intermission() {
 	}
 }
 /* DU x*/
-/* Poppy's Boutique (checked) */
+/* Poppy's Boutique x*/
 function PoppysBoutique() {
 	var slot = document.getElementById("PoppysBoutique");
     var now = new Date();
@@ -2338,7 +2422,7 @@ function PoppysBoutique() {
     		slot.classList.add("hide");
 	}
 }
-/* Polito's Pizza (checked) */
+/* Polito's Pizza x*/
 function PolitosPizzaWausau() {
 	var slot = document.getElementById("PolitosPizzaWausau");
     var now = new Date();
@@ -2349,7 +2433,7 @@ function PolitosPizzaWausau() {
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
 	/* Mon-Thurs 11am-10pm Fri 11am-11pm Sat 11am-10pm Sun 11am-8pm */
-	if(((0 == day && 10 <= hour && 19 >= hour)||(1 == day && 10 <= hour && 21 >= hour)||(2 == day && 10 <= hour && 21 >= hour)||(3 == day && 10 <= hour && 21 >= hour)||(4 == day && 10 <= hour && 21 >= hour)||(5 == day && 10 <= hour && 22 >= hour)||(6 == day && 10 <= hour && 21 >= hour))&&
+	if(((0 == day && 10 <= hour && 19 >= hour)||(1 == day && 10 <= hour && 21 >= hour)||(2 == day && 10 <= hour && 21 >= hour)||(3 == day && 10 <= hour && 21 >= hour)||(4 == day && 10 <= hour && 21 >= hour)||(5 == day && 10 <= hour && 22 >= hour)||(6 == day && 9 <= hour && 21 >= hour))&&
 		(a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 3 &&
@@ -2361,7 +2445,7 @@ function PolitosPizzaWausau() {
     		slot.classList.add("hide");
 	}
 }
-/* Daly's (checked) */
+/* Daly's x*/
 function Dalys() {
 	var slot = document.getElementById("Dalys");
     var now = new Date();
@@ -2385,7 +2469,7 @@ function Dalys() {
 	}
 }
 /* DY x*/
-/* Jalapenos Mexican Restaurante Bar (checked) */
+/* Jalapenos Mexican Restaurante Bar x*/
 function JalapenosMexicanRestauranteBar() {
 	var slot = document.getElementById("JalapenosMexicanRestauranteBar");
     var now = new Date();
@@ -2409,7 +2493,7 @@ function JalapenosMexicanRestauranteBar() {
     		slot.classList.add("hide");
 	}
 }
-/* Issac's Fine Appearel Inc.  (checked) */
+/* Issac's Fine Appearel Inc.  x*/
 function IssacsFineAppearelInc() {
 	var slot = document.getElementById("IssacsFineAppearelInc");
     var now = new Date();
@@ -2434,7 +2518,7 @@ function IssacsFineAppearelInc() {
 /* EB x*/
 /* EC x*/
 /* ED x*/
-/* City Grill (checked) */
+/* City Grill x*/
 function CityGrill() {
 	var slot = document.getElementById("CityGrill");
     var now = new Date();
@@ -2457,7 +2541,7 @@ function CityGrill() {
     		slot.classList.add("hide");
 	}
 }
-/* Malarkey's Pub & townies Grill (checked) */
+/* Malarkey's Pub & townies Grill x*/
 function MalarkeysPubAndTowniesGrill() {
 	var slot = document.getElementById("MalarkeysPubAndTowniesGrill");
     var now = new Date();
@@ -2481,7 +2565,7 @@ function MalarkeysPubAndTowniesGrill() {
     		slot.classList.add("hide");
 	}
 }
-/* Central Board shop (checked) */
+/* Central Board shop x*/
 function CentralBoardShop() {
 	var slot = document.getElementById("CentralBoardShop");
     var now = new Date();
@@ -2503,7 +2587,7 @@ function CentralBoardShop() {
     		slot.classList.add("hide");
 	}
 }
-/* Antiques by Ginny (checked) */
+/* Antiques by Ginny x*/
 function AntiquesByGinny() {
 	var slot = document.getElementById("AntiquesByGinny");
     var now = new Date();
@@ -2524,7 +2608,7 @@ function AntiquesByGinny() {
     		slot.classList.add("hide");
 	}
 }
-/* The Local (checked) */
+/* The Local x*/
 function TheLocal() {
 	var slot = document.getElementById("TheLocal");
     var now = new Date();
@@ -2547,7 +2631,7 @@ function TheLocal() {
     		slot.classList.add("hide");
 	}
 }
-/* The Mint Cafe (checked) */
+/* The Mint Cafe x*/
 function TheMintCafe() {
 	var slot = document.getElementById("TheMintCafe");
     var now = new Date();
@@ -2570,7 +2654,7 @@ function TheMintCafe() {
     		slot.classList.add("hide");
 	}
 }
-/* Inner Sleeve Records (checked) */
+/* Inner Sleeve Records x*/
 function InnerSleeveRecords() {
 	var slot = document.getElementById("InnerSleeveRecords");
     var now = new Date();
@@ -2592,7 +2676,7 @@ function InnerSleeveRecords() {
     		slot.classList.add("hide");
 	}
 }
-/* Limericks Public House  (checked) */
+/* Limericks Public House  x*/
 function LimericksPublicHouse() {
 	var slot = document.getElementById("LimericksPublicHouse");
     var now = new Date();
@@ -2615,7 +2699,7 @@ function LimericksPublicHouse() {
     		slot.classList.add("hide");
 	}
 }
-/* Chang Garden Wausau (checked)*/
+/* Chang Garden Wausau x*/
 function ChangGardenWausau() {
 	var slot = document.getElementById("ChangGardenWausau");
     var now = new Date();
@@ -2638,7 +2722,7 @@ function ChangGardenWausau() {
     		slot.classList.add("hide");
 	}
 }
-/* Marathon County Public Library (checked) */
+/* Marathon County Public Library x*/
 function MarathonCountyPublicLibrary() {
 	var slot = document.getElementById("MarathonCountyPublicLibrary");
     var now = new Date();
@@ -2660,7 +2744,7 @@ function MarathonCountyPublicLibrary() {
     		slot.classList.add("hide");
 	}
 }
-/* Wausau Center/Mall (checked) */
+/* Wausau Center/Mall x*/
 function WausauCenterMall() {
 	var slot = document.getElementById("WausauCenterMall");
     var now = new Date();
@@ -2683,7 +2767,7 @@ function WausauCenterMall() {
 	}
 }
 /* EP x*/
-/* Red Eye Brewing Company (checked) */
+/* Red Eye Brewing Company x*/
 function RedEyeBrewingCompany() {
 	var slot = document.getElementById("RedEyeBrewingCompany");
     var now = new Date();
@@ -2706,7 +2790,7 @@ function RedEyeBrewingCompany() {
     		slot.classList.add("hide");
 	}
 }
-/* Patina Coffeehouse (checked) */
+/* Patina Coffeehouse x*/
 function PatinaCoffeeHouse() {
 	var slot = document.getElementById("PatinaCoffeeHouse");
     var now = new Date();
@@ -2729,7 +2813,7 @@ function PatinaCoffeeHouse() {
     		slot.classList.add("hide");
 	}
 }
-/* Oak Island Park (checked) */
+/* Oak Island Park x*/
 function OakIslandPark() {
 	var slot = document.getElementById("OakIslandPark");
     var now = new Date();
@@ -2751,7 +2835,7 @@ function OakIslandPark() {
     		slot.classList.add("hide");;
 	}
 }
-/* Isle of Ferns Park (checked) */
+/* Isle of Ferns Park x*/
 function IsleOfFernsPark() {
 	var slot = document.getElementById("IsleOfFernsPark");
     var now = new Date();
@@ -2775,7 +2859,7 @@ function IsleOfFernsPark() {
 	}
 }
 /* EU x*/
-/* Pleasant View Park (checked) */
+/* Pleasant View Park x*/
 function PleasantViewPark() {
 	var slot = document.getElementById("PleasantViewPark");
     var now = new Date();
@@ -2786,7 +2870,8 @@ function PleasantViewPark() {
 	var c = document.getElementById("spending").value;
 	var e = document.getElementById("choicePark").checked;
 	/* Everyday 6am-11pm */
-	if((5 <= hour && 22 >= hour)&&
+	if(
+		(5 <= hour && 22 >= hour)&&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		e){
@@ -2797,7 +2882,7 @@ function PleasantViewPark() {
     		slot.classList.add("hide");
 	}
 }
-/* Memorial Pool (checked) */
+/* Memorial Pool x*/
 function MemorialPool() {
 	var slot = document.getElementById("MemorialPool");
     var now = new Date();
@@ -2820,7 +2905,7 @@ function MemorialPool() {
     		slot.classList.add("hide");
 	}
 }
-/* Memorial Park (checked) */
+/* Memorial Park x*/
 function MemorialPark() {
 	var slot = document.getElementById("MemorialPark");
     var now = new Date();
@@ -2842,7 +2927,7 @@ function MemorialPark() {
     		slot.classList.add("hide");
 	}
 }
-/* Alexander Park (checked) */
+/* Alexander Park x*/
 function AlexanderPark() {
 	var slot = document.getElementById("AlexanderPark");
     var now = new Date();
@@ -2864,7 +2949,7 @@ function AlexanderPark() {
     		slot.classList.add("hide");
 	}
 }
-/* Airport Park (checked) */
+/* Airport Park x*/
 function AirportPark() {
 	var slot = document.getElementById("AirportPark");
     var now = new Date();
@@ -2888,7 +2973,7 @@ function AirportPark() {
 	}
 }
 /* FA x*/
-/* Grand Valley Adventures (checked) */
+/* Grand Valley Adventures x*/
 function GrandValleyAdventures() {
 	var slot = document.getElementById("GrandValleyAdventures");
     var now = new Date();
@@ -2899,7 +2984,14 @@ function GrandValleyAdventures() {
 	var c = document.getElementById("spending").value;
 	var e = document.getElementById("choiceOutsideActivity").checked;
 	/* Wed-Fri 12pm-5pm Sat 10am-5pm Sat 10am-5pm Sun 12pm-6pm */
-	if(((0 == day && 11 <= hour && 17 >= hour)||(3 == day && 11 <= hour && 16 >= hour)||(4 == day && 11 <= hour && 16 >= hour)||(5 == day && 11 <= hour && 16 >= hour)||(6 == day && 9 <= hour && 16 >= hour))&&
+	if(
+		(	
+			(0 == day && 11 <= hour && 17 >= hour)||
+			(3 == day && 11 <= hour && 16 >= hour)||
+			(4 == day && 11 <= hour && 16 >= hour)||
+			(5 == day && 11 <= hour && 16 >= hour)||
+			(6 == day && 9 <= hour && 16 >= hour)
+		)&&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 40 &&
@@ -2911,7 +3003,7 @@ function GrandValleyAdventures() {
     		slot.classList.add("hide");
 	}
 }
-/* Eastbay Sports Complex (checked) */
+/* Eastbay Sports Complex x*/
 function EastbaySportsComplex() {
 	var slot = document.getElementById("EastbaySportsComplex");
     var now = new Date();
@@ -2933,7 +3025,7 @@ function EastbaySportsComplex() {
     		slot.classList.add("hide");
 	}
 }
-/* Jenny's Family Restaurant (checked) */
+/* Jenny's Family Restaurant x*/
 function JennysFamilyRestaurant() {
 	var slot = document.getElementById("JennysFamilyRestaurant");
     var now = new Date();
@@ -2956,7 +3048,7 @@ function JennysFamilyRestaurant() {
     		slot.classList.add("hide");
 	}
 }
-/* Fat Joe's Pizzeria (checked) */
+/* Fat Joe's Pizzeria x*/
 function FatJoesPizzeria() {
 	var slot = document.getElementById("FatJoesPizzeria");
     var now = new Date();
@@ -2967,7 +3059,7 @@ function FatJoesPizzeria() {
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
 	/* Sun-Thurs 4pm-9pm Fri&Sat 4pm-10pm */ 
-	if(((0 == day && 15 <= hour && 20 >= hour)||(1 == day && 15 <= hour && 20 >= hour)||(2 == day && 15 <= hour && 20 >= hour)||(3 == day && 15 <= hour && 20 >= hour)||(4 == day && 15 <= hour && 20 >= hour)||(5 == day && 15 <= hour && 21 >= hour)||(6 == day && 15 <= hour && 21 >= hour))&&
+	if(((0 == day && 15 <= hour && 20 >= hour)&&(1 == day && 15 <= hour && 20 >= hour)&&(2 == day && 15 <= hour && 20 >= hour)&&(3 == day && 15 <= hour && 20 >= hour)&&(4 == day && 15 <= hour && 20 >= hour)&&(5 == day && 15 <= hour && 21 >= hour)&&(6 == day && 15 <= hour && 21 >= hour))&&
 		( a === "All of Wausau"|| a === "Wausau") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 15 &&
@@ -2979,7 +3071,7 @@ function FatJoesPizzeria() {
     		slot.classList.add("hide");
 	}
 }
-/* Dairy Queen (treats only) (checked) */
+/* Dairy Queen (treats only) x*/
 function DairyQueenTreatsOnly() {
 	var slot = document.getElementById("DairyQueenTreatsOnly");
     var now = new Date();
@@ -3010,18 +3102,12 @@ function DairyQueenTreatsOnly() {
 */
 /* Pro Player x*/
 function ProPlayer() {
-	var slot = document.getElementById("ProPlayer");
-    var now = new Date();
-	var day = now.getDay();
-    var hour = now.getHours();
 	var a = document.getElementById("city").value;
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
 	var g = document.getElementById("choiceBar").checked;
-	/* Sun-Mon 11am-2am Fri&Sat 11am-2:30am */
-	if(((10 <= hour && 23 >= hour)||(1 >= hour))&&
-		( a === "All of Wausau"|| a === "Schofield") &&
+	if(( a === "All of Wausau"|| a === "Schofield") &&
 	    ( b === "21 and Over" )&&
 		c >= 20 &&
 		(d || g)){
@@ -3034,17 +3120,12 @@ function ProPlayer() {
 }
 /* FI x*/
 /* FJ x*/
-/* Perkin's (checked) */
+/* Perkin's x*/
 function PerkinsSchofield() {
-	var slot = document.getElementById("PerkinsSchofield");
-    var now = new Date();
-	var day = now.getDay();
-    var hour = now.getHours();
 	var a = document.getElementById("city").value;
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
-	/* 24 Hours */ 
 	if(( a === "All of Wausau"|| a === "Schofield") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 7 &&
@@ -3058,17 +3139,11 @@ function PerkinsSchofield() {
 }
 /* Johnny Cee Cards x*/
 function JohnnyCeeCards() {
-	var slot = document.getElementById("JohnnyCeeCards");
-    var now = new Date();
-	var day = now.getDay();
-    var hour = now.getHours();
 	var a = document.getElementById("city").value;
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var f = document.getElementById("choiceShopping").checked;
-	/* Sat-Thurs 12pm-8pm Fri 12pm-10pm */
-	if(((0==day&&11<=hour&&19>=hour)||(1==day&&11<=hour&&19>=hour)||(2==day&&11<=hour&&19>=hour)||(3==day&&11<=hour&&19>=hour)||(4==day&&11<=hour&&19>=hour)||(5==day&&11<=hour&&21>=hour))&&
-		( a === "All of Wausau"|| a === "Schofield") &&
+	if(( a === "All of Wausau"|| a === "Schofield") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		f){
 		slot.classList.remove("hide");
@@ -3080,17 +3155,11 @@ function JohnnyCeeCards() {
 }
 /* The Office Bar x*/
 function TheOfficeBar() {
-	var slot = document.getElementById("TheOfficeBar");
-    var now = new Date();
-	var day = now.getDay();
-    var hour = now.getHours();
 	var a = document.getElementById("city").value;
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var g = document.getElementById("choiceBar").checked;
-	/*Sun 9am-2am Mon 11am-2am Tues-Thurs 7am-2am Fri 6am-2:30am Sat 9am-2:30am */
-	if((((0==day&&8<=hour&&23>=hour)||(1==day&&1>=hour))||((1==day&&10<=hour&&23>=hour)||(2==day&&1>=hour))||((2==day&&6<=hour&&23>=hour)||(3==day&&1>=hour))||((3==day&&6<=hour&&23>=hour)||(4==day&&1>=hour))||((4==day&&6<=hour&&23>=hour)||(5==day&&1>=hour))||((5==day&&5<=hour&&23>=hour)||(6==day&&1>=hour))||((6==day&&8<=hour&&23>=hour)||(0==day&&1>=hour)))&&
-		( a === "All of Wausau"|| a === "Schofield") &&
+	if(( a === "All of Wausau"|| a === "Schofield") &&
 	    ( b === "21 and Over" )&&
 		c >= 7 &&
 		g){
@@ -3103,15 +3172,10 @@ function TheOfficeBar() {
 }
 /* Taco Bell x*/
 function TacoBellSchofield() {
-	var slot = document.getElementById("TacoBellSchofield");
-    var now = new Date();
-	var day = now.getDay();
-    var hour = now.getHours();
 	var a = document.getElementById("city").value;
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
-	/* Sun-Thurs 7am-1am Fri&Sat 7am-3am */
 	if(( a === "All of Wausau"|| a === "Schofield") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 1 &&
@@ -3125,17 +3189,11 @@ function TacoBellSchofield() {
 }
 /* Hot Wok Chinese Express x*/
 function HotWokChineseExpress() {
-	var slot = document.getElementById("HotWokChineseExpress");
-    var now = new Date();
-	var day = now.getDay();
-    var hour = now.getHours();
 	var a = document.getElementById("city").value;
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
-	/*Sun-Thurs 11am-9pm Fri&Sat 11am-9:30pm */
-	if((10<=hour&&20>=hour)&&
-		( a === "All of Wausau"|| a === "Schofield") &&
+	if(( a === "All of Wausau"|| a === "Schofield") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 4 &&
 		d){
@@ -3149,42 +3207,29 @@ function HotWokChineseExpress() {
 /* FP x*/
 /* Arby's x*/
 function ArbysSchofield() {
-	var slot=document.getElementById("ArbysSchofield");
-	var now=new Date();
-	var day=now.getDay();
-	var hour=now.getHours();
-	var a=document.getElementById("city").value;
-	var b=document.getElementById("age").value;
-	var c=document.getElementById("spending").value;
-	var d=document.getElementById("choiceEat").checked;
-	/* Everyday 6:30am-10pm */
-	if(
-		(6<=hour&21>=hour)&&
-		(a==="All of Wausau" || a==="Schofield")&&
-		(b==="Under 18" || b==="18-20" || b==="21 and Over")&&
-		c>=7&&
+	var a = document.getElementById("city").value;
+	var b = document.getElementById("age").value; 
+	var c = document.getElementById("spending").value;
+	var d = document.getElementById("choiceEat").checked;
+	if(( a === "All of Wausau"|| a === "Schofield") &&
+	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
+		c >= 7 &&
 		d){
 		slot.classList.remove("hide");
-		slot.classList.add("specificEventWausau");
-		} else {
+        slot.classList.add("specificEventWausau");
+	} else {
 		slot.classList.remove("specificEventWausau");
-		slot.classList.add("hide");
-		}
+    		slot.classList.add("hide");
+	}
 }
 /* Sconni's Alehouse & Eatery x*/
 function SconnisAlehouseAndEatery() {
-	var slot = document.getElementById("SconnisAlehouseAndEatery");
-    var now = new Date();
-	var day = now.getDay();
-    var hour = now.getHours();
 	var a = document.getElementById("city").value;
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
 	var g = document.getElementById("choiceBar").checked;
-	/* Sun 11am-9pm Mon-Sat 11am-12am */
-	if(((0==day&&10<=hour&&20>=hour)||(1==day&&10<=hour&&23>=hour)||(2==day&&10<=hour&&23>=hour)||(3==day&&10<=hour&&23>=hour)||(4==day&&10<=hour&&23>=hour)||(5==day&&10<=hour&&23>=hour)||(6==day&&10<=hour&&23>=hour))&&
-		( a === "All of Wausau"|| a === "Schofield") &&
+	if(( a === "All of Wausau"|| a === "Schofield") &&
 	    (b === "21 and Over" )&&
 		c >= 15 &&
 		(d || g)){
@@ -3198,17 +3243,11 @@ function SconnisAlehouseAndEatery() {
 /* FS x*/
 /* Pawn America x*/
 function PawnAmerica() {
-	var slot = document.getElementById("PawnAmerica");
-    var now = new Date();
-	var day = now.getDay();
-    var hour = now.getHours();
 	var a = document.getElementById("city").value;
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var f = document.getElementById("choiceShopping").checked;
-	/* Mon-Fri 10am-7pm Sat 10am-6pm Sun12pm-6pm */
-	if(((0==day&&11<=hour&&17>=hour)||(1==day&&9<=hour&&18>=hour)||(2==day&&9<=hour&&18>=hour)||(3==day&&9<=hour&&18>=hour)||(4==day&&9<=hour&&18>=hour)||(5==day&&9<=hour&&18>=hour)||(6==day&&9<=hour&&17>=hour))&&
-		( a === "All of Wausau"|| a === "Schofield") &&
+	if(( a === "All of Wausau"|| a === "Schofield") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		f){
 		slot.classList.remove("hide");
@@ -3220,17 +3259,11 @@ function PawnAmerica() {
 }
 /* 50-50 Factory Outlet x*/
 function FiftyFiftyFactoryOutlet() {
-	var slot = document.getElementById("FiftyFiftyFactoryOutlet");
-    var now = new Date();
-	var day = now.getDay();
-    var hour = now.getHours();
 	var a = document.getElementById("city").value;
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var f = document.getElementById("choiceShopping").checked;
-	/* Sun 10am-5pm Mon-Fri 9am-9pm Sat 9am-8pm */
-	if(((0==day&&9<=hour&&16>=hour)||(1==day&&8<=hour&&20>=hour)||(2==day&&8<=hour&&20>=hour)||(3==day&&8<=hour&&20>=hour)||(4==day&&8<=hour&&20>=hour)||(5==day&&8<=hour&&20>=hour)||(6==day&&8<=hour&&19>=hour))&&
-		( a === "All of Wausau"|| a === "Schofield") &&
+	if(( a === "All of Wausau"|| a === "Schofield") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		f){
 		slot.classList.remove("hide");
@@ -3241,18 +3274,12 @@ function FiftyFiftyFactoryOutlet() {
 	}
 }
 /* Log Cabin x*/
-function LogCabin() {
-	var slot = document.getElementById("LogCabin");
-    var now = new Date();
-	var day = now.getDay();
-    var hour = now.getHours();
+function LobCabin() {
 	var a = document.getElementById("city").value;
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var d = document.getElementById("choiceEat").checked;
-	/* Sun&Mon 5am-9pm Tues-Sat 5am-10pm */
-	if(((0==day&&4>=hour&&20>=hour)||(1==day&&4>=hour&&20>=hour)||(2==day&&4>=hour&&21>=hour)||(3==day&&4>=hour&&21>=hour)||(4==day&&4>=hour&&21>=hour)||(5==day&&4>=hour&&21>=hour)||(6==day&&4>=hour&&21>=hour))&&
-		( a === "All of Wausau"|| a === "Schofield") &&
+	if(( a === "All of Wausau"|| a === "Schofield") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 7 &&
 		d){
@@ -3265,17 +3292,11 @@ function LogCabin() {
 }
 /* 19th Hole Tavern x*/
 function NinteenthHoleTavern() {
-	var slot = document.getElementById("NinteenthHoleTavern");
-    var now = new Date();
-	var day = now.getDay();
-    var hour = now.getHours();
 	var a = document.getElementById("city").value;
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var g = document.getElementById("choiceBar").checked;
-	/* Sun 8am-2am Mon-Sat 7am-2am */
-	if((((0==day&&7<=hour&&23>=hour)||(1==day&&1>=hour))||((1==day&&6<=hour&&23>=hour)||(2==day&&1>=hour))||((2==day&&6<=hour&&23>=hour)||(3==day&&1>=hour))||((3==day&&6<=hour&&23>=hour)||(4==day&&1>=hour))||((4==day&&6<=hour&&23>=hour)||(5==day&&1>=hour))||((5==day&&6<=hour&&23>=hour)||(6==day&&1>=hour))||((6==day&&6<=hour&&23>=hour)||(0==day&&1>=hour)))&&
-		( a === "All of Wausau"|| a === "Schofield") &&
+	if(( a === "All of Wausau"|| a === "Schofield") &&
 	    ( b === "21 and Over" )&&
 		c >= 15 &&
 		g){
@@ -3288,18 +3309,11 @@ function NinteenthHoleTavern() {
 }
 /* Mayoral Park x*/
 function MayoralPark() {
-	var slot = document.getElementById("MayoralPark");
-    var now = new Date();
-	var day = now.getDay();
-    var hour = now.getHours();
 	var a = document.getElementById("city").value;
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var e = document.getElementById("choicePark").checked;
-	/* Everyday 6am-11pm */
-	if(
-		(5<=hour&&22>=hour)&&
-		( a === "All of Wausau"|| a === "Schofield") &&
+	if(( a === "All of Wausau"|| a === "Schofield") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		e){
 		slot.classList.remove("hide");
@@ -3312,17 +3326,11 @@ function MayoralPark() {
 /* FY x*/
 /* Krueger Floral and Gifts x*/
 function KruegerFloralAndGifts() {
-	var slot = document.getElementById("KruegerFloralAndGifts");
-    var now = new Date();
-	var day = now.getDay();
-    var hour = now.getHours();
 	var a = document.getElementById("city").value;
 	var b = document.getElementById("age").value; 
 	var c = document.getElementById("spending").value;
 	var f = document.getElementById("choiceShopping").checked;
-	/* Mon-Fri 8am-5:30pm Sat 8am-2pm */
-	if(((1==day&&7<=hour&&16>=hour)||(2==day&&7<=hour&&16>=hour)||(3==day&&7<=hour&&16>=hour)||(4==day&&7<=hour&&16>=hour)||(5==day&&7<=hour&&16>=hour)||(6==day&&7<=hour&&13>=hour))&&
-		( a === "All of Wausau"|| a === "Schofield") &&
+	if(( a === "All of Wausau"|| a === "Schofield") &&
 	    (b === "Under 18" || b === "18-20" || b === "21 and Over" )&&
 		c >= 15 &&
 		f){
