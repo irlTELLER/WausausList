@@ -1,11 +1,35 @@
-/*
-	Comment
-*/
+.image {
+	width: 100%;
+	border: black solid 1px;
+}
 
-a { /* Comment */ color: /* Comment */ Red; }
+#img {
+	width:100%;
+}
 
-.TestClass {
-	color: Black;
-	background-color: White;
-	text-align: left;
+.button {
+    background-color: #4169E1;
+    color: gold;
+    font-size: 100%;
+    text-align: center;
+    border: solid #ADD8E6 3px;
+    border-radius: 25px;
+    padding: 5px;
+    position: static;
+    width: auto;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
+}
+
+.BigButton {
+    background-color: #4169E1;
+    color: gold;
+    font-size: 115%;
+    text-align: center;
+    border: solid #ADD8E6 3px;
+    border-radius: 25px;
+    padding: 5px;
+	margin: auto;
+    position: static;
+    width: 75%;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
 }

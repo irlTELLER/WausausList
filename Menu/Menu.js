@@ -97,3 +97,57 @@ function menu24()
 		{
 			document.getElementById("img").src ="TheRedAppleFamilyRestaurant5.jpg";
 		}
+		
+function showhideJemma() {
+	var jemmas = document.getElementById("Jemmas")
+	if (jemmas.style.display==="none") {
+		jemmas.style.display="block";
+	} else {
+		jemmas.style.display="none";
+	}
+}
+
+function showhidePapillons() {
+	var papillons = document.getElementById("Papillons")
+	if (papillons.style.display==="none") {
+		papillons.style.display="block";
+	} else {
+		papillons.style.display="none";
+	}
+}
+
+function showhideJennys() {
+	var jennys = document.getElementById("Jennys")
+	if (jennys.style.display==="none") {
+		jennys.style.display="block";
+	} else {
+		jennys.style.display="none";
+	}
+}
+
+function showhideLaTaqueria() {
+	var lataqueria = document.getElementById("LaTaqueria")
+	if (lataqueria.style.display==="none") {
+		lataqueria.style.display="block";
+	} else {
+		lataqueria.style.display="none";
+	}
+}
+
+function showhideBlueWillow() {
+	var bluewillow = document.getElementById("BlueWillowCafe")
+	if (bluewillow.style.display==="none") {
+		bluewillow.style.display="block";
+	} else {
+		bluewillow.style.display="none";
+	}
+}
+
+function showhideRedApple() {
+	var redapple = document.getElementById("RedApple")
+	if (redapple.style.display==="none") {
+		redapple.style.display="block";
+	} else {
+		redapple.style.display="none";
+	}
+}

@@ -10,7 +10,30 @@
 	.word-spacing {
 		word-spacing:20px;
 }
-	
+
+.btts {
+	border-radius: 25px;
+    background: linear-gradient(to bottom right, #4169E1, #ADD8D0);
+ 	padding: 5px;
+    width: 97%;
+	box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align: left;
+	font-size:115%;
+	position: relative;
+	font-family: ubuntuBody;
+}
+
+.btt {
+	border-radius: 25px;
+    background: linear-gradient(to bottom right, #4169E1, #ADD8D0);
+ 	padding: 5px;
+    width: 97%;
+	box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align: left;
+	font-size:115%;
+	position: relative;
+	font-family: ubuntuBody;
+}
 /* Checkbox Input */
 	/* Customize the label (the container) */
 	.container {
@@ -114,10 +137,9 @@
     }
     .dollar {
     		background: linear-gradient(to bottom right, #ADD8E6, #4169E1);
-    		width: 45%;
+    		width: 97%;
     		padding: 5px;
    	 	height: 65px;
-   		float: left;
     		border-radius: 5px;
     		font-family: ubuntuBody;
     		color: gold;
@@ -136,12 +158,13 @@
 	background-color: #4169E1;
 	color: gold;
 	font-size: 140%;
+	margin: auto;
 	text-align: center;
 	border: solid #ADD8E6 3px;
 	border-radius: 15px;
-	padding: 5px 5px;
+	padding: 2%;
 	position: static;
-	width: 95%;
+	width: 92%;
 	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
 	font-family: UbuntuHeading;
 	}
@@ -159,7 +182,8 @@
 	border-radius: 15px;
 	padding: 5px 5px;
 	position: static;
-	width: 95%;
+	width: 92%;
+	margin: 2% auto;
 	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
 	font-family: UbuntuBody;
 	}
@@ -169,7 +193,8 @@
 	}
 	.body {
     background: #4169E1;
-    width: 95%;
+    width: 92%;
+	margin: auto;
     padding: 5px;
 	border-radius: 15px;
 	border: solid #ADD8E6 3px;
@@ -186,23 +211,23 @@
 	}
     .city {
     background: linear-gradient(to bottom right, #ADD8E6, #4169E1);
-    width: 45%;
+    width: 97%;
     padding: 5px;
     height: 35px;
-    float: left;
+	margin: 3px 0;
     border-radius: 5px;
     }
     .age {
     background: linear-gradient(to bottom right, #ADD8E6, #4169E1);
-    width: 45%;
+    width: 97%;
     padding: 5px;
     height: 35px;
-    float: right;
+	margin: 3px 0;
     border-radius: 5px;
     }
     .activity {
     background: linear-gradient(to bottom right, #ADD8E6, #4169E1);
-    width: 98%;
+    width: 97%;
     padding: 5px;
 	margin: 5px 0;
     border-radius: 5px;
@@ -210,16 +235,16 @@
     }
 
 	.send {
-    width: 45%;
+    width: 97%;
    	padding: 5px;
-    height: 84px;
-    float: right;
     border-radius: 5px;
 	font-family: ubuntu;
     }
     .dropdown {
 	background: #ADD8E6;
 	color: black;
+	padding: 5px;
+	font-size: 20px;
     width: 100%;
     text-align: center;
 	font-family: ubuntuBody;
@@ -350,30 +375,30 @@
 		.container {
 			width: 28%;
 		}
-		.body {
-			height: 285px;
-		}
-		
 	}
 	@media only screen and (max-width: 1000px) and (min-width: 701px) {
 		.word-spacing {
 			word-spacing: 0px;
 		}
-		.body {
-			height: 280px;
-		}
 	}
 	@media only screen and (max-width: 700px) and (min-width: 501px) {
-		.body {
-			height: 306px;
-		}
 		.word-spacing {
 			word-spacing: 0px;
 		}
 	}
 	@media only screen and (max-width: 500px) and (min-width: 350px) {
-		.body {
-			height: 320px;
+		.container {
+			width: 100%;
+			align: center;
+			margin: 5px;
+			font-size: 25px;
+		}
+		.checkmark{
+			height: 25px;
+			width: 25px;
+		}
+		.word-spacing {
+			word-spacing: 0px;
 		}
 	}
 	@media screen and (max-device-width: 349px) and (min-device-width: 275px) {
@@ -390,7 +415,19 @@
 		.word-spacing {
 			word-spacing: 0px;
 		}
-		.body {
-			height: 530px;
+	}
+	@media screen and (max-device-width: 274px) and (min-device-width: 200px) {
+		.container {
+			width: 100%;
+			align: center;
+			margin: 5px;
+			font-size: 25px;
+		}
+		.checkmark{
+			height: 25px;
+			width: 25px;
+		}
+		.word-spacing {
+			word-spacing: 0px;
 		}
 	}
