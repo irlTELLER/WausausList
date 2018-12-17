@@ -90,7 +90,7 @@ function TwentyFiveTenRestaurant() {
 	var eat=document.getElementById("choiceEat").checked;
 	var bar=document.getElementById("choiceBar").checked;
 	/* (Sun - Thur) 11am - 9pm  (Fri & Sat) 11am - 10pm */
-	if(((0==day&&10<=hour&&20<=hour)||(1==day&&10<=hour&&20<=hour)||(2==day&&10<=hour&&20<=hour)||(3==day&&10<=hour&&20<=hour)||(4==day&&10<=hour&&20<=hour)||(5==day&&10<=hour&&21>=hour)||(6==day&&10<=hour&&21>=hour))&&
+	if(((0==day&&10<=hour&&20>=hour)||(1==day&&10<=hour&&20>=hour)||(2==day&&10<=hour&&20>=hour)||(3==day&&10<=hour&&20>=hour)||(4==day&&10<=hour&&20>=hour)||(5==day&&10<=hour&&21>=hour)||(6==day&&10<=hour&&21>=hour))&&
 		(city==="All of Wausau"||city==="Wausau")&&
 	    (age==="18-20"||age==="21 and Over")&&
 		(dollar>=15)&&
@@ -1153,7 +1153,7 @@ function RiversidePark() {
 	var age=document.getElementById("age").value; 
 	var park=document.getElementById("choicePark").checked;
 	/* Everyday 6am-11pm */
-	if((5<=hour&&22<=hour)&&
+	if((5<=hour&&22>=hour)&&
 		(city==="All of Wausau"||city==="Wausau")&&
 	    (age==="Under 18"||age==="18-20"||age==="21 and Over")&&
 		park){
